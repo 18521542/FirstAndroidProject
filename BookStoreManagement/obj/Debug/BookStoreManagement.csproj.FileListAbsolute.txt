@@ -1,0 +1,7 @@
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\bin\Debug\BookStoreManagement.exe.config
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\bin\Debug\BookStoreManagement.exe
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\bin\Debug\BookStoreManagement.pdb
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\obj\Debug\BookStoreManagement.csprojAssemblyReference.cache
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\obj\Debug\BookStoreManagement.csproj.CoreCompileInputs.cache
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\obj\Debug\BookStoreManagement.exe
+D:\Đại học\Năm3\Lập trình trực quan\BookStoreManagement\BookStoreManagement\obj\Debug\BookStoreManagement.pdb
