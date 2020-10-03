@@ -12,7 +12,7 @@ namespace BookStoreManagement
         {
             Console.WriteLine("Hello world");
             Console.ReadLine();
-
+            // conflict nua thi nghi :)
         }
     }
 }
