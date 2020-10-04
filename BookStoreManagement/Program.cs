@@ -15,6 +15,7 @@ namespace BookStoreManagement
             Console.ReadLine();
             // conflict nua thi nghi :)
             // another one
+            // another conflict
         }
     }
 }
