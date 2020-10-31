@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BAF55FCC-E2D5-4F56-AFF8-7E2D39383384}</ProjectGuid>
+    <ProjectGuid>{C4514BAE-8048-47D7-A5C0-F92681CE7EBC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BookStoreManagement</RootNamespace>
-    <AssemblyName>BookStoreManagement</AssemblyName>
+    <RootNamespace>DTO</RootNamespace>
+    <AssemblyName>DTO</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

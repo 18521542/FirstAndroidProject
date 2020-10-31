@@ -4,17 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStoreManagement
+namespace GUI
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
-            Console.ReadLine();
-            // conflict nua thi nghi :)
-            // another conflict
-            // adsadasdadad
         }
     }
 }
