@@ -9,7 +9,7 @@ namespace DAL
 {
     class DatabaseAccess
     {
-        //field
+        //fields
         private string server = "localhost";
         private string databaseName = "BookStoreManagement";
         private string userName = "root";
@@ -17,9 +17,10 @@ namespace DAL
         private string port = "3306";
         public MySqlConnection conn = null;
 
+        //single-ton design
         private static DatabaseAccess instance = null;
 
-        
+        //single-ton methods
         public static DatabaseAccess getInstance()
         {
             if (instance == null)
@@ -27,6 +28,7 @@ namespace DAL
             return instance;
         }
 
+        //methods
         public void getConnect()
         {
             string _server = "Server = " + server + ";";
