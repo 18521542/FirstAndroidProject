@@ -11,16 +11,20 @@ namespace BLL
 {
     public class AccountBLL
     {
-        public List<AccountDTO> GetAllAccounts() { }
+        public bool Login(string username, string password) 
+        {
+            AccountDAL accDAL = new AccountDAL();
+            return accDAL.Login(username, password);
+        }
 
-        public AccountDTO GetAccount(int id) { }
+        //public List<AccountDTO> GetAllAccounts() { }
 
-        public AccountDTO GetAccountByUsername(string username) { }
+        //public AccountDTO GetAccount(int id) { }
 
-        public bool Login(string username, string password) {}
+        //public AccountDTO GetAccountByUsername(string username) { }
 
-        public bool AddAccount() { }
+        //public bool AddAccount() { }
 
-        public bool DeleteAccount() { }
+        //public bool DeleteAccount() { }
     }
 }
