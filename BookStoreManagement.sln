@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Tier", "GUI_Tier\GUI_Tier.csproj", "{7E5943EE-5159-4951-9238-1B3637D557B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "..\..\Test\Interface\Interface.csproj", "{F6FFF18F-D6EE-4222-8942-CD12DC015F26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7E5943EE-5159-4951-9238-1B3637D557B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5943EE-5159-4951-9238-1B3637D557B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5943EE-5159-4951-9238-1B3637D557B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6FFF18F-D6EE-4222-8942-CD12DC015F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6FFF18F-D6EE-4222-8942-CD12DC015F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6FFF18F-D6EE-4222-8942-CD12DC015F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6FFF18F-D6EE-4222-8942-CD12DC015F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
