@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
+//using BLL;
 
 namespace GUI_Tier
 {
     public partial class LoginForm : Form
     {
-        private AccountBLL controller = null;
+        //private AccountBLL controller = null;
         public LoginForm()
         {
             InitializeComponent();
@@ -21,11 +21,55 @@ namespace GUI_Tier
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            controller = new AccountBLL();
-            if (controller.Login(txfUsername.Text, txfPassword.Text))
-                MessageBox.Show("Thanh cong");
+            //controller = new AccountBLL();
+            //if (controller.Login(txfUsername.Text, txfPassword.Text))
+            //    MessageBox.Show("Thanh cong");
+            //else
+            //    MessageBox.Show("That bai");
+        }
+
+        private void Username_text(object sender, EventArgs e)
+        {
+            if ( textBox1.Text == "Nhập tài khoản")
+            {
+                textBox1.Clear();
+            }
             else
-                MessageBox.Show("That bai");
+            {
+                if(textBox1.TextLength == 0)
+                {
+                    textBox1.Text = "Nhập tài khoản";
+                }
+            }
+                if (textBox2.TextLength == 0)
+                {
+                    textBox2.Text = "Nhập mật khẩu";
+                }
+
+        }
+
+        private void Password_text(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "Nhập mật khẩu")
+            {
+                textBox2.Clear();
+            }
+            else
+            {
+                if (textBox2.TextLength == 0)
+                {
+                    textBox2.Text = "Nhập mật khẩu";
+                }
+            }
+                if (textBox1.TextLength == 0)
+                {
+                    textBox1.Text = "Nhập tài khoản";
+                }
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
