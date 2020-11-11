@@ -7,13 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using BLL;
+using BLL;
 
 namespace GUI_Tier
 {
     public partial class LoginForm : Form
     {
-        //private AccountBLL controller = null;
+        private static LoginForm instance = null;
+        public static LoginForm getInstance() 
+        {
+            if (instance == null)
+                instance = new LoginForm();
+            return instance;
+        }
+        private AccountBLL controller = null;
         public LoginForm()
         {
             InitializeComponent();
@@ -21,49 +28,56 @@ namespace GUI_Tier
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //controller = new AccountBLL();
-            //if (controller.Login(txfUsername.Text, txfPassword.Text))
-            //    MessageBox.Show("Thanh cong");
-            //else
-            //    MessageBox.Show("That bai");
+            controller = new AccountBLL();
+            if (controller.Login(tbUsername.Text, tbPassword.Text))
+            {
+                MessageBox.Show("Login thanh cong");
+                LoginForm.getInstance().Hide();
+                MainUI main = new MainUI();
+                main.Show();
+                //MainUIWPF main = new MainUIWPF();
+                //main.
+            }
+            else
+                MessageBox.Show("That bai");
         }
 
         private void Username_text(object sender, EventArgs e)
         {
-            if ( textBox1.Text == "Nhập tài khoản")
+            if ( tbUsername.Text == "Nhập tài khoản")
             {
-                textBox1.Clear();
+                tbUsername.Clear();
             }
             else
             {
-                if(textBox1.TextLength == 0)
+                if(tbUsername.TextLength == 0)
                 {
-                    textBox1.Text = "Nhập tài khoản";
+                    tbUsername.Text = "Nhập tài khoản";
                 }
             }
-                if (textBox2.TextLength == 0)
+                if (tbPassword.TextLength == 0)
                 {
-                    textBox2.Text = "Nhập mật khẩu";
+                    tbPassword.Text = "Nhập mật khẩu";
                 }
 
         }
 
         private void Password_text(object sender, EventArgs e)
         {
-            if (textBox2.Text == "Nhập mật khẩu")
+            if (tbPassword.Text == "Nhập mật khẩu")
             {
-                textBox2.Clear();
+                tbPassword.Clear();
             }
             else
             {
-                if (textBox2.TextLength == 0)
+                if (tbPassword.TextLength == 0)
                 {
-                    textBox2.Text = "Nhập mật khẩu";
+                    tbPassword.Text = "Nhập mật khẩu";
                 }
             }
-                if (textBox1.TextLength == 0)
+                if (tbUsername.TextLength == 0)
                 {
-                    textBox1.Text = "Nhập tài khoản";
+                    tbUsername.Text = "Nhập tài khoản";
                 }
         }
 
