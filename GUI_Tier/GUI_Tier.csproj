@@ -51,24 +51,114 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="FormForReportFunction\FormInventoryReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="FormForReportFunction\FormInventoryReport.Designer.cs">
+      <DependentUpon>FormInventoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormForReportFunction\FormRevenueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForReportFunction\FormRevenueReport.Designer.cs">
+      <DependentUpon>FormRevenueReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForEmployeeAndRule\FormRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForEmployeeAndRule\FormRule.Designer.cs">
+      <DependentUpon>FormRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForManageData\FormBookData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForManageData\FormBookData.Designer.cs">
+      <DependentUpon>FormBookData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForManageData\FormCategoryAndAuthorData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForManageData\FormCategoryAndAuthorData.Designer.cs">
+      <DependentUpon>FormCategoryAndAuthorData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForManageData\FormCustomerData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForManageData\FormCustomerData.Designer.cs">
+      <DependentUpon>FormCustomerData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForEmployeeAndRule\FormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForEmployeeAndRule\FormEmployee.Designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForSelling-Function\FormReceiveBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForSelling-Function\FormReceiveBook.Designer.cs">
+      <DependentUpon>FormReceiveBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForSelling-Function\FormReceiveMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForSelling-Function\FormReceiveMoney.Designer.cs">
+      <DependentUpon>FormReceiveMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsForSelling-Function\FormSellBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForSelling-Function\FormSellBook.Designer.cs">
+      <DependentUpon>FormSellBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainAppForms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAppForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainUI.cs">
+    <Compile Include="MainAppForms\MainUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainUI.Designer.cs">
+    <Compile Include="MainAppForms\MainUI.Designer.cs">
       <DependentUpon>MainUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="MainAppForms\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="FormForReportFunction\FormInventoryReport.resx">
+      <DependentUpon>FormInventoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormForReportFunction\FormRevenueReport.resx">
+      <DependentUpon>FormRevenueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForEmployeeAndRule\FormRule.resx">
+      <DependentUpon>FormRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForManageData\FormBookData.resx">
+      <DependentUpon>FormBookData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForManageData\FormCategoryAndAuthorData.resx">
+      <DependentUpon>FormCategoryAndAuthorData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForManageData\FormCustomerData.resx">
+      <DependentUpon>FormCustomerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForEmployeeAndRule\FormEmployee.resx">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForSelling-Function\FormReceiveBook.resx">
+      <DependentUpon>FormReceiveBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForSelling-Function\FormReceiveMoney.resx">
+      <DependentUpon>FormReceiveMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForSelling-Function\FormSellBook.resx">
+      <DependentUpon>FormSellBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAppForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainUI.resx">
+    <EmbeddedResource Include="MainAppForms\MainUI.resx">
       <DependentUpon>MainUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -91,7 +181,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="MainAppForms\App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -100,11 +190,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\account_48px.png" />
-    <Content Include="Images\books_100px.png" />
-    <Content Include="Images\password_24px.png" />
-    <Content Include="Images\Pic.jpg" />
-    <Content Include="Images\user_24px.png" />
+    <Content Include="Resources\account_48px.png" />
+    <Content Include="Resources\books_100px.png" />
+    <Content Include="Resources\password_24px.png" />
+    <Content Include="Resources\Pic.jpg" />
+    <Content Include="Resources\user_24px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

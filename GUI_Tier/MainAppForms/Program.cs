@@ -16,7 +16,7 @@ namespace GUI_Tier
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(LoginForm.getInstance());
         }
     }
 }

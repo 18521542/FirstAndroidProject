@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GUI_Tier.FormForReportFunction;
+using GUI_Tier.FormsForEmployeeAndRule;
+using GUI_Tier.FormsForSelling_Function;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +15,37 @@ namespace GUI_Tier
 {
     public partial class MainUI : Form
     {
+        //for childform which is appearing in the right panel
+        private Form activeForm = null;
+
+        //flag for submenu appear
         private bool isForDataManageMenuReadyToCollapse = true;
-
         private bool isForSellMenuReadyToCollapse = true;
-
         private bool isForReportMenuReadyToCollapse = true;
-
         private bool isForEmployeeAndRuleReadyToCollapse = true;
+
+        //open a child form
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         public MainUI()
         {
             InitializeComponent();
         }
 
-        //show submenu from DataManageMenu
+        //============================================================================= 
+        //show submenu from DataManageMenu                          
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (isForDataManageMenuReadyToCollapse)
@@ -51,7 +71,25 @@ namespace GUI_Tier
         {
             timerForManageDataMenu.Start();
         }
+        //Open FormBookData
+        private void btnBookData_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormBookData());
+        }
 
+        //Open FormCategoryAndAuthorData
+        private void btnCategoryAndAuthorData_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCategoryAndAuthorData());
+        }
+
+        //Open FormCustomerData
+        private void btnCustomerData_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCustomerData());
+        }
+
+        //=============================================================================  
         //show submenu for SellMenu
         private void timerForSellMenu_Tick(object sender, EventArgs e)
         {
@@ -79,6 +117,25 @@ namespace GUI_Tier
             timerForSellMenu.Start();
         }
 
+        //Open FormSellBook
+        private void btnSellBook_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormSellBook());
+        }
+
+        //Open FormReceiveBook
+        private void btnReceiveBook_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormReceiveBook());
+        }
+
+        //Open FormReceiveMoney
+        private void btnReceiveMoney_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormReceiveMoney());
+        }
+
+        //=============================================================================
         //show submenu for ReportMenu
         private void timerForReportMenu_Tick(object sender, EventArgs e)
         {
@@ -106,6 +163,19 @@ namespace GUI_Tier
             timerForReportMenu.Start();
         }
 
+        //Open FormInventoryReport
+        private void btnInventoryReport_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormInventoryReport());
+        }
+
+        //Open FormRevenueReport
+        private void btnRevenueReport_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRevenueReport());
+        }
+
+        //=============================================================================
         //show submenu for EmployeeAndRuleMenu
         private void btnEmpAndRuleMenu_Click(object sender, EventArgs e)
         {
@@ -133,12 +203,25 @@ namespace GUI_Tier
             }
         }
 
+        //Open FormEmployee
+        private void btnEmployeeClick(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormEmployee());
+        }
+
+        //Open FormRule
+        private void btnRuleClick(object sender, EventArgs e)
+        {
+                OpenChildForm(new FormRule());
+        }
+
+        //=============================================================================
+
+        //logout
         private void button1_Click(object sender, EventArgs e)
         {
-            
             this.Dispose();
             LoginForm.getInstance().Show();
-
         }
     }
 }
