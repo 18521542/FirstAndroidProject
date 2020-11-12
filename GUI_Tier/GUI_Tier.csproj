@@ -188,6 +188,10 @@
       <Project>{99a208f5-d5a4-4082-8425-9f521a5624fa}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{c4514bae-8048-47d7-a5c0-f92681ce7ebc}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\account_48px.png" />
