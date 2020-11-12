@@ -142,7 +142,7 @@
             // 
             // btnReportMenu
             // 
-            this.btnReportMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnReportMenu.BackColor = System.Drawing.Color.Purple;
             this.btnReportMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportMenu.FlatAppearance.BorderSize = 0;
             this.btnReportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -204,7 +204,7 @@
             // 
             // btnEmpAndRuleMenu
             // 
-            this.btnEmpAndRuleMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEmpAndRuleMenu.BackColor = System.Drawing.Color.Purple;
             this.btnEmpAndRuleMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmpAndRuleMenu.FlatAppearance.BorderSize = 0;
             this.btnEmpAndRuleMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -283,7 +283,7 @@
             // 
             // btnSellMenu
             // 
-            this.btnSellMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnSellMenu.BackColor = System.Drawing.Color.Purple;
             this.btnSellMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSellMenu.FlatAppearance.BorderSize = 0;
             this.btnSellMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -362,7 +362,7 @@
             // 
             // btnDataMenu
             // 
-            this.btnDataMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnDataMenu.BackColor = System.Drawing.Color.Purple;
             this.btnDataMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDataMenu.FlatAppearance.BorderSize = 0;
             this.btnDataMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -380,7 +380,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel4.BackColor = System.Drawing.Color.GhostWhite;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(306, 324);
@@ -390,7 +390,7 @@
             // 
             this.MenuPanel.AutoScroll = true;
             this.MenuPanel.AutoScrollMinSize = new System.Drawing.Size(1, 0);
-            this.MenuPanel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.MenuPanel.BackColor = System.Drawing.Color.Purple;
             this.MenuPanel.Controls.Add(this.panel4);
             this.MenuPanel.Controls.Add(this.panelManageData);
             this.MenuPanel.Controls.Add(this.panel1);
