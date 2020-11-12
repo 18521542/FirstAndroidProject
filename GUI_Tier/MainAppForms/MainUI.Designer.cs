@@ -397,7 +397,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lbAddress);
             this.panel4.Controls.Add(this.lbEmail);
             this.panel4.Controls.Add(this.lblPhone);
@@ -449,6 +449,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(68, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
@@ -458,6 +459,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Purple;
             this.label2.Location = new System.Drawing.Point(72, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
@@ -467,6 +469,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Purple;
             this.label3.Location = new System.Drawing.Point(69, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
@@ -476,6 +479,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Purple;
             this.label4.Location = new System.Drawing.Point(92, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
@@ -485,6 +489,7 @@
             // 
             // label5
             // 
+            this.label5.ForeColor = System.Drawing.Color.Purple;
             this.label5.Location = new System.Drawing.Point(3, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(303, 23);
@@ -497,7 +502,8 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 32);
+            this.label6.ForeColor = System.Drawing.Color.Purple;
+            this.label6.Location = new System.Drawing.Point(38, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(220, 29);
             this.label6.TabIndex = 5;
@@ -506,6 +512,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Purple;
             this.label7.Location = new System.Drawing.Point(101, 142);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 17);
@@ -515,6 +522,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Purple;
             this.label8.Location = new System.Drawing.Point(99, 235);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 17);
@@ -524,6 +532,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Purple;
             this.label9.Location = new System.Drawing.Point(81, 267);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 17);
@@ -533,6 +542,7 @@
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
+            this.lbUsername.ForeColor = System.Drawing.Color.Purple;
             this.lbUsername.Location = new System.Drawing.Point(147, 87);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(73, 17);
@@ -542,6 +552,7 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
+            this.lbPassword.ForeColor = System.Drawing.Color.Purple;
             this.lbPassword.Location = new System.Drawing.Point(147, 115);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(73, 17);
@@ -551,6 +562,7 @@
             // lbType
             // 
             this.lbType.AutoSize = true;
+            this.lbType.ForeColor = System.Drawing.Color.Purple;
             this.lbType.Location = new System.Drawing.Point(147, 142);
             this.lbType.Name = "lbType";
             this.lbType.Size = new System.Drawing.Size(73, 17);
@@ -560,6 +572,7 @@
             // lbRealname
             // 
             this.lbRealname.AutoSize = true;
+            this.lbRealname.ForeColor = System.Drawing.Color.Purple;
             this.lbRealname.Location = new System.Drawing.Point(147, 172);
             this.lbRealname.Name = "lbRealname";
             this.lbRealname.Size = new System.Drawing.Size(73, 17);
@@ -569,6 +582,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.ForeColor = System.Drawing.Color.Purple;
             this.lblPhone.Location = new System.Drawing.Point(147, 201);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(73, 17);
@@ -578,6 +592,7 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
+            this.lbEmail.ForeColor = System.Drawing.Color.Purple;
             this.lbEmail.Location = new System.Drawing.Point(147, 235);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(73, 17);
@@ -587,6 +602,7 @@
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
+            this.lbAddress.ForeColor = System.Drawing.Color.Purple;
             this.lbAddress.Location = new System.Drawing.Point(147, 267);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(73, 17);
