@@ -34,7 +34,31 @@ namespace DAL
                 return false;
             }      
         }
-        //public AccountDTO GetAccountByUsername(string _username) { }
+        public AccountDTO GetAccountByUsername(string _username) 
+        {
+            AccountDTO rs = null;
+
+            DatabaseAccess.getInstance().getConnect();
+            MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+            cmd.CommandText = "Call USP_GetAccountByUsername('"+_username+"')";
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                string username = reader.GetString(0);
+                string password = reader.GetString(1);
+                int type = reader.GetInt32(2);
+                string realname = reader.GetString(3);
+                string phonenumber = reader.GetString(4);
+                string email = reader.GetString(5);
+                string address = reader.GetString(6);
+
+                rs = new AccountDTO(username, password, type, realname, phonenumber, email, address);
+
+            }
+
+            return rs;
+        }
 
         public List<AccountDTO> getAllAccounts()
         {

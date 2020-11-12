@@ -1,4 +1,6 @@
-﻿using GUI_Tier.FormForReportFunction;
+﻿using DTO;
+using BLL;
+using GUI_Tier.FormForReportFunction;
 using GUI_Tier.FormsForEmployeeAndRule;
 using GUI_Tier.FormsForSelling_Function;
 using System;
@@ -17,6 +19,12 @@ namespace GUI_Tier
     {
         //for childform which is appearing in the right panel
         private Form activeForm = null;
+
+        //for user who is using this software
+        private AccountDTO user = null;
+
+        //controller
+        private AccountBLL controller = null;
 
         //flag for submenu appear
         private bool isForDataManageMenuReadyToCollapse = true;
@@ -39,11 +47,26 @@ namespace GUI_Tier
             childForm.Show();
         }
 
-        public MainUI()
+        public MainUI(string username)
         {
             InitializeComponent();
+            controller = new AccountBLL();
+            user = new AccountDTO();
+            user = controller.GetAccountByUsername(username);
+            ShowInfo();
         }
 
+        //Show info of active user when login-in
+        private void ShowInfo()
+        {
+            lbUsername.Text = user.getUsername();
+            lbPassword.Text = user.getPassword();
+            lbType.Text = user.getType().ToString();
+            lbRealname.Text = user.getRealName();
+            lbEmail.Text = user.getEmail();
+            lblPhone.Text = user.getPhoneNumber();
+            lbAddress.Text = user.getAddress();
+        }
         //============================================================================= 
         //show submenu from DataManageMenu                          
         private void timer1_Tick(object sender, EventArgs e)
@@ -71,6 +94,7 @@ namespace GUI_Tier
         {
             timerForManageDataMenu.Start();
         }
+
         //Open FormBookData
         private void btnBookData_Click(object sender, EventArgs e)
         {
@@ -160,7 +184,15 @@ namespace GUI_Tier
         }
         private void btnReportMenu_Click(object sender, EventArgs e)
         {
-            timerForReportMenu.Start();
+            if (user.getType() == 0)
+            {
+                timerForReportMenu.Start();
+            }
+            else
+            {
+                MessageBox.Show("You don't have permision to do this funtion");
+            }
+            
         }
 
         //Open FormInventoryReport
@@ -179,7 +211,14 @@ namespace GUI_Tier
         //show submenu for EmployeeAndRuleMenu
         private void btnEmpAndRuleMenu_Click(object sender, EventArgs e)
         {
-            timerForEmployeeAndRuleMenu.Start();
+            if (user.getType() == 0)
+            {
+                timerForEmployeeAndRuleMenu.Start();
+            }
+            else
+            {
+                MessageBox.Show("You don't have permision to do this funtion");
+            } 
         }
         private void timerForEmployeeAndRuleMenu_Tick(object sender, EventArgs e)
         {
@@ -222,6 +261,11 @@ namespace GUI_Tier
         {
             this.Dispose();
             LoginForm.getInstance().Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

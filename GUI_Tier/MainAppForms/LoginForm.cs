@@ -33,7 +33,7 @@ namespace GUI_Tier
             {
                 MessageBox.Show("Login thanh cong");
                 LoginForm.getInstance().Hide();
-                MainUI main = new MainUI();
+                MainUI main = new MainUI(tbUsername.Text);
                 main.Show();
                 //MainUIWPF main = new MainUIWPF();
                 //main.

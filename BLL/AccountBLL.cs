@@ -24,7 +24,10 @@ namespace BLL
 
         //public AccountDTO GetAccount(int id) { }
 
-        //public AccountDTO GetAccountByUsername(string username) { }
+        public AccountDTO GetAccountByUsername(string username) 
+        {
+            return accDAL.GetAccountByUsername(username);
+        }
 
         //public bool AddAccount() { }
 
