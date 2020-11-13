@@ -48,13 +48,13 @@ namespace GUI_Tier
             {
                 tbUsername.Clear();
             }
-            else
-            {
-                if(tbUsername.TextLength == 0)
-                {
-                    tbUsername.Text = "Nhập tài khoản";
-                }
-            }
+            //else
+            //{
+            //    if(tbUsername.TextLength == 0)
+            //    {
+            //        tbUsername.Text = "Nhập tài khoản";
+            //    }
+            //}
                 if (tbPassword.TextLength == 0)
                 {
                     tbPassword.Text = "Nhập mật khẩu";
@@ -68,13 +68,13 @@ namespace GUI_Tier
             {
                 tbPassword.Clear();
             }
-            else
-            {
-                if (tbPassword.TextLength == 0)
-                {
-                    tbPassword.Text = "Nhập mật khẩu";
-                }
-            }
+            //else
+            //{
+            //    if (tbPassword.TextLength == 0)
+            //    {
+            //        tbPassword.Text = "Nhập mật khẩu";
+            //    }
+            //}
                 if (tbUsername.TextLength == 0)
                 {
                     tbUsername.Text = "Nhập tài khoản";
