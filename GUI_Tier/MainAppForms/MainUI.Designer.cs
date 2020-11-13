@@ -72,20 +72,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelManageData.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timerForManageDataMenu
@@ -144,7 +144,7 @@
             this.btnReportRevenueData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportRevenueData.FlatAppearance.BorderSize = 0;
             this.btnReportRevenueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportRevenueData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportRevenueData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReportRevenueData.ForeColor = System.Drawing.Color.Tomato;
             this.btnReportRevenueData.Location = new System.Drawing.Point(0, 86);
             this.btnReportRevenueData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -161,7 +161,7 @@
             this.btnReportBookData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportBookData.FlatAppearance.BorderSize = 0;
             this.btnReportBookData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportBookData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportBookData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReportBookData.ForeColor = System.Drawing.Color.Tomato;
             this.btnReportBookData.Location = new System.Drawing.Point(0, 40);
             this.btnReportBookData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -211,7 +211,7 @@
             this.btnRuleData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRuleData.FlatAppearance.BorderSize = 0;
             this.btnRuleData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuleData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRuleData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnRuleData.ForeColor = System.Drawing.Color.Tomato;
             this.btnRuleData.Location = new System.Drawing.Point(0, 86);
             this.btnRuleData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -228,7 +228,7 @@
             this.btnEmployeeData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmployeeData.FlatAppearance.BorderSize = 0;
             this.btnEmployeeData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployeeData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnEmployeeData.ForeColor = System.Drawing.Color.Tomato;
             this.btnEmployeeData.Location = new System.Drawing.Point(0, 40);
             this.btnEmployeeData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -279,7 +279,7 @@
             this.btnReceiveBookData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReceiveBookData.FlatAppearance.BorderSize = 0;
             this.btnReceiveBookData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceiveBookData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiveBookData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReceiveBookData.ForeColor = System.Drawing.Color.Tomato;
             this.btnReceiveBookData.Location = new System.Drawing.Point(0, 132);
             this.btnReceiveBookData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -296,7 +296,7 @@
             this.btnReceiveMoneyData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReceiveMoneyData.FlatAppearance.BorderSize = 0;
             this.btnReceiveMoneyData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceiveMoneyData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiveMoneyData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnReceiveMoneyData.ForeColor = System.Drawing.Color.Tomato;
             this.btnReceiveMoneyData.Location = new System.Drawing.Point(0, 86);
             this.btnReceiveMoneyData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -313,7 +313,7 @@
             this.btnBillData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBillData.FlatAppearance.BorderSize = 0;
             this.btnBillData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBillData.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBillData.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBillData.ForeColor = System.Drawing.Color.Tomato;
             this.btnBillData.Location = new System.Drawing.Point(0, 40);
             this.btnBillData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -675,39 +675,6 @@
             this.panelChildForm.Size = new System.Drawing.Size(962, 810);
             this.panelChildForm.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-2, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
@@ -718,6 +685,39 @@
             this.pictureBox1.Size = new System.Drawing.Size(31, 28);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
             // 
             // MainUI
             // 
@@ -738,10 +738,10 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.MenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -789,9 +789,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
