@@ -86,7 +86,7 @@
             // TableUser
             // 
             this.TableUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TableUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.TableUser.BackColor = System.Drawing.SystemColors.Control;
             this.TableUser.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Username,
             this.Password,
