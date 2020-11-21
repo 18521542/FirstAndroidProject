@@ -51,64 +51,64 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormForReportFunction\FormInventoryReport.cs">
+    <Compile Include="Forms__ReportFunction\FormInventoryReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormForReportFunction\FormInventoryReport.Designer.cs">
+    <Compile Include="Forms__ReportFunction\FormInventoryReport.Designer.cs">
       <DependentUpon>FormInventoryReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormForReportFunction\FormRevenueReport.cs">
+    <Compile Include="Forms__ReportFunction\FormRevenueReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormForReportFunction\FormRevenueReport.Designer.cs">
+    <Compile Include="Forms__ReportFunction\FormRevenueReport.Designer.cs">
       <DependentUpon>FormRevenueReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForEmployeeAndRule\FormRule.cs">
+    <Compile Include="Forms__EmployeeAndRule\FormRule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForEmployeeAndRule\FormRule.Designer.cs">
+    <Compile Include="Forms__EmployeeAndRule\FormRule.Designer.cs">
       <DependentUpon>FormRule.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForManageData\FormBookData.cs">
+    <Compile Include="Forms__ForManageData\FormBookData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForManageData\FormBookData.Designer.cs">
+    <Compile Include="Forms__ForManageData\FormBookData.Designer.cs">
       <DependentUpon>FormBookData.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForManageData\FormCategoryAndAuthorData.cs">
+    <Compile Include="Forms__ForManageData\FormCategoryAndAuthorData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForManageData\FormCategoryAndAuthorData.Designer.cs">
+    <Compile Include="Forms__ForManageData\FormCategoryAndAuthorData.Designer.cs">
       <DependentUpon>FormCategoryAndAuthorData.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForManageData\FormCustomerData.cs">
+    <Compile Include="Forms__ForManageData\FormCustomerData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForManageData\FormCustomerData.Designer.cs">
+    <Compile Include="Forms__ForManageData\FormCustomerData.Designer.cs">
       <DependentUpon>FormCustomerData.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForEmployeeAndRule\FormEmployee.cs">
+    <Compile Include="Forms__EmployeeAndRule\FormEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForEmployeeAndRule\FormEmployee.Designer.cs">
+    <Compile Include="Forms__EmployeeAndRule\FormEmployee.Designer.cs">
       <DependentUpon>FormEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForSelling-Function\FormReceiveBook.cs">
+    <Compile Include="Forms__Selling-Function\FormReceiveBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForSelling-Function\FormReceiveBook.Designer.cs">
+    <Compile Include="Forms__Selling-Function\FormReceiveBook.Designer.cs">
       <DependentUpon>FormReceiveBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForSelling-Function\FormReceiveMoney.cs">
+    <Compile Include="Forms__Selling-Function\FormReceiveMoney.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForSelling-Function\FormReceiveMoney.Designer.cs">
+    <Compile Include="Forms__Selling-Function\FormReceiveMoney.Designer.cs">
       <DependentUpon>FormReceiveMoney.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsForSelling-Function\FormSellBook.cs">
+    <Compile Include="Forms__Selling-Function\FormSellBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsForSelling-Function\FormSellBook.Designer.cs">
+    <Compile Include="Forms__Selling-Function\FormSellBook.Designer.cs">
       <DependentUpon>FormSellBook.cs</DependentUpon>
     </Compile>
     <Compile Include="MainAppForms\LoginForm.cs">
@@ -125,34 +125,34 @@
     </Compile>
     <Compile Include="MainAppForms\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormForReportFunction\FormInventoryReport.resx">
+    <EmbeddedResource Include="Forms__ReportFunction\FormInventoryReport.resx">
       <DependentUpon>FormInventoryReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormForReportFunction\FormRevenueReport.resx">
+    <EmbeddedResource Include="Forms__ReportFunction\FormRevenueReport.resx">
       <DependentUpon>FormRevenueReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForEmployeeAndRule\FormRule.resx">
+    <EmbeddedResource Include="Forms__EmployeeAndRule\FormRule.resx">
       <DependentUpon>FormRule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForManageData\FormBookData.resx">
+    <EmbeddedResource Include="Forms__ForManageData\FormBookData.resx">
       <DependentUpon>FormBookData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForManageData\FormCategoryAndAuthorData.resx">
+    <EmbeddedResource Include="Forms__ForManageData\FormCategoryAndAuthorData.resx">
       <DependentUpon>FormCategoryAndAuthorData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForManageData\FormCustomerData.resx">
+    <EmbeddedResource Include="Forms__ForManageData\FormCustomerData.resx">
       <DependentUpon>FormCustomerData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForEmployeeAndRule\FormEmployee.resx">
+    <EmbeddedResource Include="Forms__EmployeeAndRule\FormEmployee.resx">
       <DependentUpon>FormEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForSelling-Function\FormReceiveBook.resx">
+    <EmbeddedResource Include="Forms__Selling-Function\FormReceiveBook.resx">
       <DependentUpon>FormReceiveBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForSelling-Function\FormReceiveMoney.resx">
+    <EmbeddedResource Include="Forms__Selling-Function\FormReceiveMoney.resx">
       <DependentUpon>FormReceiveMoney.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsForSelling-Function\FormSellBook.resx">
+    <EmbeddedResource Include="Forms__Selling-Function\FormSellBook.resx">
       <DependentUpon>FormSellBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainAppForms\LoginForm.resx">
