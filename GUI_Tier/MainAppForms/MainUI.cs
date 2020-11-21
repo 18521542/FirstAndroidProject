@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI_Tier.Properties;
 
 namespace GUI_Tier
 {
@@ -47,13 +48,47 @@ namespace GUI_Tier
             childForm.Show();
         }
 
+        private void LoadImageForAllButtonMenu()
+        {
+            btnDataMenu.Image = Resources.Expand_Arrow_20px;
+            btnEmpAndRuleMenu.Image = Resources.Expand_Arrow_20px;
+            btnReportMenu.Image = Resources.Expand_Arrow_20px;
+            btnSellMenu.Image = Resources.Expand_Arrow_20px;
+        }
+
         public MainUI(string username)
         {
             InitializeComponent();
+            LoadImageForAllButtonMenu();
             controller = new AccountBLL();
             user = new AccountDTO();
             user = controller.GetAccountByUsername(username);
             ShowInfo();
+        }
+
+        //logic for show submenu when click menu
+        private void timer_tick(ref bool isForSubmenuCollapse, Panel panelChosen, Timer timerForThisSubmenu, Button btnMenuChosen)
+        {
+            if (isForSubmenuCollapse)
+            {
+                btnMenuChosen.Image = Resources.Collapse_Arrow_20px;
+                panelChosen.Height += 10;
+                if (panelChosen.Size == panelChosen.MaximumSize)
+                {
+                    timerForThisSubmenu.Stop();
+                    isForSubmenuCollapse = false;
+                }
+            }
+            else
+            {
+                btnMenuChosen.Image = Resources.Expand_Arrow_20px;
+                panelChosen.Height -= 10;
+                if (panelChosen.Size == panelChosen.MinimumSize)
+                {
+                    timerForThisSubmenu.Stop();
+                    isForSubmenuCollapse = true;
+                }
+            }
         }
 
         //Show info of active user when login-in
@@ -67,121 +102,65 @@ namespace GUI_Tier
             lblPhone.Text = user.getPhoneNumber();
             lbAddress.Text = user.getAddress();
         }
-        //============================================================================= 
+
         //show submenu from DataManageMenu                          
         private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (isForDataManageMenuReadyToCollapse)
-            {
-                panelManageData.Height += 10;
-                if (panelManageData.Size == panelManageData.MaximumSize)
-                {
-                    timerForManageDataMenu.Stop();
-                    isForDataManageMenuReadyToCollapse = false;
-                }
-            }
-            else
-            {
-                panelManageData.Height -= 10;
-                if (panelManageData.Size == panelManageData.MinimumSize)
-                {
-                    timerForManageDataMenu.Stop();
-                    isForDataManageMenuReadyToCollapse = true;
-                }
-            }
+        { 
+            timer_tick(ref isForDataManageMenuReadyToCollapse, panelManageData, timerForManageDataMenu,btnDataMenu);
         }
+
         private void btnDataMenu_Click(object sender, EventArgs e)
         {
             timerForManageDataMenu.Start();
         }
 
-        //Open FormBookData
         private void btnBookData_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormBookData());
         }
 
-        //Open FormCategoryAndAuthorData
         private void btnCategoryAndAuthorData_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormCategoryAndAuthorData());
         }
 
-        //Open FormCustomerData
         private void btnCustomerData_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormCustomerData());
         }
 
-        //=============================================================================  
         //show submenu for SellMenu
         private void timerForSellMenu_Tick(object sender, EventArgs e)
         {
-            if (isForSellMenuReadyToCollapse)
-            {
-                panel1.Height += 10;
-                if (panel1.Size == panel1.MaximumSize)
-                {
-                    timerForSellMenu.Stop();
-                    isForSellMenuReadyToCollapse = false;
-                }
-            }
-            else
-            {
-                panel1.Height -= 10;
-                if (panel1.Size == panel1.MinimumSize)
-                {
-                    timerForSellMenu.Stop();
-                    isForSellMenuReadyToCollapse = true;
-                }
-            }
+            timer_tick(ref isForSellMenuReadyToCollapse, panel1, timerForSellMenu, btnSellMenu);
         }
+
         private void btnSellMenu_Click(object sender, EventArgs e)
         {
             timerForSellMenu.Start();
         }
-
-        //Open FormSellBook
+        
         private void btnSellBook_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormSellBook());
         }
-
-        //Open FormReceiveBook
+        
         private void btnReceiveBook_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormReceiveBook());
         }
 
-        //Open FormReceiveMoney
         private void btnReceiveMoney_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormReceiveMoney());
         }
 
-        //=============================================================================
         //show submenu for ReportMenu
         private void timerForReportMenu_Tick(object sender, EventArgs e)
         {
-            if (isForReportMenuReadyToCollapse)
-            {
-                panel3.Height += 10;
-                if (panel3.Size == panel3.MaximumSize)
-                {
-                    timerForReportMenu.Stop();
-                    isForReportMenuReadyToCollapse = false;
-                }
-            }
-            else
-            {
-                panel3.Height -= 10;
-                if (panel3.Size == panel3.MinimumSize)
-                {
-                    timerForReportMenu.Stop();
-                    isForReportMenuReadyToCollapse = true;
-                }
-            }
+            timer_tick(ref isForReportMenuReadyToCollapse, panel3, timerForReportMenu, btnReportMenu);
         }
+
         private void btnReportMenu_Click(object sender, EventArgs e)
         {
             if (user.getType() == 0)
@@ -195,19 +174,16 @@ namespace GUI_Tier
             
         }
 
-        //Open FormInventoryReport
         private void btnInventoryReport_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormInventoryReport());
         }
 
-        //Open FormRevenueReport
         private void btnRevenueReport_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormRevenueReport());
         }
 
-        //=============================================================================
         //show submenu for EmployeeAndRuleMenu
         private void btnEmpAndRuleMenu_Click(object sender, EventArgs e)
         {
@@ -220,41 +196,21 @@ namespace GUI_Tier
                 MessageBox.Show("You don't have permision to do this funtion");
             } 
         }
+
         private void timerForEmployeeAndRuleMenu_Tick(object sender, EventArgs e)
         {
-            if (isForEmployeeAndRuleReadyToCollapse)
-            {
-                panel2.Height += 10;
-                if (panel2.Size == panel2.MaximumSize)
-                {
-                    timerForEmployeeAndRuleMenu.Stop();
-                    isForEmployeeAndRuleReadyToCollapse = false;
-                }
-            }
-            else
-            {
-                panel2.Height -= 10;
-                if (panel2.Size == panel2.MinimumSize)
-                {
-                    timerForEmployeeAndRuleMenu.Stop();
-                    isForEmployeeAndRuleReadyToCollapse = true;
-                }
-            }
+            timer_tick(ref isForEmployeeAndRuleReadyToCollapse, panel2, timerForEmployeeAndRuleMenu, btnEmpAndRuleMenu);
         }
 
-        //Open FormEmployee
         private void btnEmployeeClick(object sender, EventArgs e)
         {
             OpenChildForm(new FormEmployee());
         }
 
-        //Open FormRule
         private void btnRuleClick(object sender, EventArgs e)
         {
                 OpenChildForm(new FormRule());
         }
-
-        //=============================================================================
 
         //logout
         private void button1_Click(object sender, EventArgs e)

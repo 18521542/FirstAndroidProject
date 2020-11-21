@@ -53,24 +53,24 @@
             this.btnBookData = new System.Windows.Forms.Button();
             this.btnDataMenu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lbRealname = new System.Windows.Forms.Label();
+            this.lbType = new System.Windows.Forms.Label();
+            this.lbPassword = new System.Windows.Forms.Label();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbUsername = new System.Windows.Forms.Label();
-            this.lbPassword = new System.Windows.Forms.Label();
-            this.lbType = new System.Windows.Forms.Label();
-            this.lbRealname = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.lbAddress = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -163,13 +163,15 @@
             this.btnReportMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportMenu.FlatAppearance.BorderSize = 0;
             this.btnReportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.btnReportMenu.ForeColor = System.Drawing.Color.White;
+            this.btnReportMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReportMenu.Location = new System.Drawing.Point(0, 0);
             this.btnReportMenu.Name = "btnReportMenu";
             this.btnReportMenu.Size = new System.Drawing.Size(306, 49);
             this.btnReportMenu.TabIndex = 1;
             this.btnReportMenu.Text = "BÁO CÁO THÁNG";
+            this.btnReportMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnReportMenu.UseVisualStyleBackColor = false;
             this.btnReportMenu.Click += new System.EventHandler(this.btnReportMenu_Click);
             // 
@@ -225,13 +227,15 @@
             this.btnEmpAndRuleMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmpAndRuleMenu.FlatAppearance.BorderSize = 0;
             this.btnEmpAndRuleMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpAndRuleMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpAndRuleMenu.ForeColor = System.Drawing.Color.White;
+            this.btnEmpAndRuleMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEmpAndRuleMenu.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEmpAndRuleMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpAndRuleMenu.Location = new System.Drawing.Point(0, 0);
             this.btnEmpAndRuleMenu.Name = "btnEmpAndRuleMenu";
             this.btnEmpAndRuleMenu.Size = new System.Drawing.Size(306, 49);
             this.btnEmpAndRuleMenu.TabIndex = 1;
             this.btnEmpAndRuleMenu.Text = "NHÂN SỰ - QUY ĐỊNH";
+            this.btnEmpAndRuleMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEmpAndRuleMenu.UseVisualStyleBackColor = false;
             this.btnEmpAndRuleMenu.Click += new System.EventHandler(this.btnEmpAndRuleMenu_Click);
             // 
@@ -304,13 +308,15 @@
             this.btnSellMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSellMenu.FlatAppearance.BorderSize = 0;
             this.btnSellMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSellMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSellMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.btnSellMenu.ForeColor = System.Drawing.Color.White;
+            this.btnSellMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSellMenu.Location = new System.Drawing.Point(0, 0);
             this.btnSellMenu.Name = "btnSellMenu";
             this.btnSellMenu.Size = new System.Drawing.Size(306, 49);
             this.btnSellMenu.TabIndex = 1;
             this.btnSellMenu.Text = "QUẢN LÝ BÁN HÀNG";
+            this.btnSellMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSellMenu.UseVisualStyleBackColor = false;
             this.btnSellMenu.Click += new System.EventHandler(this.btnSellMenu_Click);
             // 
@@ -383,13 +389,15 @@
             this.btnDataMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDataMenu.FlatAppearance.BorderSize = 0;
             this.btnDataMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDataMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDataMenu.ForeColor = System.Drawing.Color.White;
+            this.btnDataMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDataMenu.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDataMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDataMenu.Location = new System.Drawing.Point(0, 0);
             this.btnDataMenu.Name = "btnDataMenu";
             this.btnDataMenu.Size = new System.Drawing.Size(306, 49);
             this.btnDataMenu.TabIndex = 1;
             this.btnDataMenu.Text = "QUẢN LÝ DỮ LIỆU";
+            this.btnDataMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDataMenu.UseVisualStyleBackColor = false;
             this.btnDataMenu.Click += new System.EventHandler(this.btnDataMenu_Click);
             // 
@@ -397,7 +405,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.lbAddress);
             this.panel4.Controls.Add(this.lbEmail);
             this.panel4.Controls.Add(this.lblPhone);
@@ -418,6 +426,169 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(306, 324);
             this.panel4.TabIndex = 1;
+            // 
+            // lbAddress
+            // 
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.ForeColor = System.Drawing.Color.Purple;
+            this.lbAddress.Location = new System.Drawing.Point(147, 267);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(73, 17);
+            this.lbAddress.TabIndex = 15;
+            this.lbAddress.Text = "Username";
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.ForeColor = System.Drawing.Color.Purple;
+            this.lbEmail.Location = new System.Drawing.Point(147, 235);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(73, 17);
+            this.lbEmail.TabIndex = 14;
+            this.lbEmail.Text = "Username";
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.ForeColor = System.Drawing.Color.Purple;
+            this.lblPhone.Location = new System.Drawing.Point(147, 201);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(73, 17);
+            this.lblPhone.TabIndex = 13;
+            this.lblPhone.Text = "Username";
+            // 
+            // lbRealname
+            // 
+            this.lbRealname.AutoSize = true;
+            this.lbRealname.ForeColor = System.Drawing.Color.Purple;
+            this.lbRealname.Location = new System.Drawing.Point(147, 172);
+            this.lbRealname.Name = "lbRealname";
+            this.lbRealname.Size = new System.Drawing.Size(73, 17);
+            this.lbRealname.TabIndex = 12;
+            this.lbRealname.Text = "Username";
+            // 
+            // lbType
+            // 
+            this.lbType.AutoSize = true;
+            this.lbType.ForeColor = System.Drawing.Color.Purple;
+            this.lbType.Location = new System.Drawing.Point(147, 142);
+            this.lbType.Name = "lbType";
+            this.lbType.Size = new System.Drawing.Size(73, 17);
+            this.lbType.TabIndex = 11;
+            this.lbType.Text = "Username";
+            // 
+            // lbPassword
+            // 
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.ForeColor = System.Drawing.Color.Purple;
+            this.lbPassword.Location = new System.Drawing.Point(147, 115);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(73, 17);
+            this.lbPassword.TabIndex = 10;
+            this.lbPassword.Text = "Username";
+            // 
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.ForeColor = System.Drawing.Color.Purple;
+            this.lbUsername.Location = new System.Drawing.Point(147, 87);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(73, 17);
+            this.lbUsername.TabIndex = 9;
+            this.lbUsername.Text = "Username";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Purple;
+            this.label9.Location = new System.Drawing.Point(81, 267);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 17);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Address:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Purple;
+            this.label8.Location = new System.Drawing.Point(99, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Email:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Purple;
+            this.label7.Location = new System.Drawing.Point(101, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Type:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Purple;
+            this.label6.Location = new System.Drawing.Point(38, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(220, 29);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "PERSONAL INFO";
+            // 
+            // label5
+            // 
+            this.label5.ForeColor = System.Drawing.Color.Purple;
+            this.label5.Location = new System.Drawing.Point(3, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(303, 23);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "---------------------------------------------------------------------------------" +
+    "---------------";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Purple;
+            this.label4.Location = new System.Drawing.Point(92, 201);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Phone:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Purple;
+            this.label3.Location = new System.Drawing.Point(69, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Realname:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Purple;
+            this.label2.Location = new System.Drawing.Point(72, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Password:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(68, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Username:";
             // 
             // MenuPanel
             // 
@@ -440,174 +611,11 @@
             // 
             this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelChildForm.BackColor = System.Drawing.Color.Green;
+            this.panelChildForm.BackColor = System.Drawing.Color.Plum;
             this.panelChildForm.Location = new System.Drawing.Point(315, 3);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1282, 997);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(68, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(72, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(69, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Realname:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Purple;
-            this.label4.Location = new System.Drawing.Point(92, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Phone:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.ForeColor = System.Drawing.Color.Purple;
-            this.label5.Location = new System.Drawing.Point(3, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(303, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "---------------------------------------------------------------------------------" +
-    "---------------";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Purple;
-            this.label6.Location = new System.Drawing.Point(38, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 29);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "PERSONAL INFO";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Purple;
-            this.label7.Location = new System.Drawing.Point(101, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Type:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Purple;
-            this.label8.Location = new System.Drawing.Point(99, 235);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Email:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Purple;
-            this.label9.Location = new System.Drawing.Point(81, 267);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Address:";
-            // 
-            // lbUsername
-            // 
-            this.lbUsername.AutoSize = true;
-            this.lbUsername.ForeColor = System.Drawing.Color.Purple;
-            this.lbUsername.Location = new System.Drawing.Point(147, 87);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(73, 17);
-            this.lbUsername.TabIndex = 9;
-            this.lbUsername.Text = "Username";
-            // 
-            // lbPassword
-            // 
-            this.lbPassword.AutoSize = true;
-            this.lbPassword.ForeColor = System.Drawing.Color.Purple;
-            this.lbPassword.Location = new System.Drawing.Point(147, 115);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(73, 17);
-            this.lbPassword.TabIndex = 10;
-            this.lbPassword.Text = "Username";
-            // 
-            // lbType
-            // 
-            this.lbType.AutoSize = true;
-            this.lbType.ForeColor = System.Drawing.Color.Purple;
-            this.lbType.Location = new System.Drawing.Point(147, 142);
-            this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(73, 17);
-            this.lbType.TabIndex = 11;
-            this.lbType.Text = "Username";
-            // 
-            // lbRealname
-            // 
-            this.lbRealname.AutoSize = true;
-            this.lbRealname.ForeColor = System.Drawing.Color.Purple;
-            this.lbRealname.Location = new System.Drawing.Point(147, 172);
-            this.lbRealname.Name = "lbRealname";
-            this.lbRealname.Size = new System.Drawing.Size(73, 17);
-            this.lbRealname.TabIndex = 12;
-            this.lbRealname.Text = "Username";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.ForeColor = System.Drawing.Color.Purple;
-            this.lblPhone.Location = new System.Drawing.Point(147, 201);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(73, 17);
-            this.lblPhone.TabIndex = 13;
-            this.lblPhone.Text = "Username";
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.AutoSize = true;
-            this.lbEmail.ForeColor = System.Drawing.Color.Purple;
-            this.lbEmail.Location = new System.Drawing.Point(147, 235);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(73, 17);
-            this.lbEmail.TabIndex = 14;
-            this.lbEmail.Text = "Username";
-            // 
-            // lbAddress
-            // 
-            this.lbAddress.AutoSize = true;
-            this.lbAddress.ForeColor = System.Drawing.Color.Purple;
-            this.lbAddress.Location = new System.Drawing.Point(147, 267);
-            this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(73, 17);
-            this.lbAddress.TabIndex = 15;
-            this.lbAddress.Text = "Username";
             // 
             // MainUI
             // 
