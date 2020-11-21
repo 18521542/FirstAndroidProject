@@ -51,6 +51,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms__ForManageData\AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms__ForManageData\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms__ForManageData\FormBookInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms__ForManageData\FormBookInfo.Designer.cs">
+      <DependentUpon>FormBookInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms__ReportFunction\FormInventoryReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="MainAppForms\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms__ForManageData\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms__ForManageData\FormBookInfo.resx">
+      <DependentUpon>FormBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms__ReportFunction\FormInventoryReport.resx">
       <DependentUpon>FormInventoryReport.cs</DependentUpon>
     </EmbeddedResource>

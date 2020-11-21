@@ -53,6 +53,7 @@
             this.btnBookData = new System.Windows.Forms.Button();
             this.btnDataMenu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbAddress = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -71,12 +72,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelManageData.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MenuPanel.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerForManageDataMenu
@@ -127,12 +130,12 @@
             // 
             // btnReportRevenueData
             // 
-            this.btnReportRevenueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnReportRevenueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReportRevenueData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportRevenueData.FlatAppearance.BorderSize = 0;
             this.btnReportRevenueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportRevenueData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportRevenueData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReportRevenueData.ForeColor = System.Drawing.Color.White;
             this.btnReportRevenueData.Location = new System.Drawing.Point(0, 106);
             this.btnReportRevenueData.Name = "btnReportRevenueData";
             this.btnReportRevenueData.Size = new System.Drawing.Size(306, 56);
@@ -143,12 +146,12 @@
             // 
             // btnReportBookData
             // 
-            this.btnReportBookData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnReportBookData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReportBookData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportBookData.FlatAppearance.BorderSize = 0;
             this.btnReportBookData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportBookData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportBookData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReportBookData.ForeColor = System.Drawing.Color.White;
             this.btnReportBookData.Location = new System.Drawing.Point(0, 49);
             this.btnReportBookData.Name = "btnReportBookData";
             this.btnReportBookData.Size = new System.Drawing.Size(306, 57);
@@ -159,7 +162,7 @@
             // 
             // btnReportMenu
             // 
-            this.btnReportMenu.BackColor = System.Drawing.Color.Purple;
+            this.btnReportMenu.BackColor = System.Drawing.Color.Black;
             this.btnReportMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportMenu.FlatAppearance.BorderSize = 0;
             this.btnReportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -191,12 +194,12 @@
             // 
             // btnRuleData
             // 
-            this.btnRuleData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnRuleData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRuleData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRuleData.FlatAppearance.BorderSize = 0;
             this.btnRuleData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRuleData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRuleData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRuleData.ForeColor = System.Drawing.Color.White;
             this.btnRuleData.Location = new System.Drawing.Point(0, 106);
             this.btnRuleData.Name = "btnRuleData";
             this.btnRuleData.Size = new System.Drawing.Size(306, 56);
@@ -207,12 +210,12 @@
             // 
             // btnEmployeeData
             // 
-            this.btnEmployeeData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEmployeeData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEmployeeData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmployeeData.FlatAppearance.BorderSize = 0;
             this.btnEmployeeData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployeeData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployeeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEmployeeData.ForeColor = System.Drawing.Color.White;
             this.btnEmployeeData.Location = new System.Drawing.Point(0, 49);
             this.btnEmployeeData.Name = "btnEmployeeData";
             this.btnEmployeeData.Size = new System.Drawing.Size(306, 57);
@@ -223,7 +226,7 @@
             // 
             // btnEmpAndRuleMenu
             // 
-            this.btnEmpAndRuleMenu.BackColor = System.Drawing.Color.Purple;
+            this.btnEmpAndRuleMenu.BackColor = System.Drawing.Color.Black;
             this.btnEmpAndRuleMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmpAndRuleMenu.FlatAppearance.BorderSize = 0;
             this.btnEmpAndRuleMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -256,12 +259,12 @@
             // 
             // btnReceiveBookData
             // 
-            this.btnReceiveBookData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnReceiveBookData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReceiveBookData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReceiveBookData.FlatAppearance.BorderSize = 0;
             this.btnReceiveBookData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceiveBookData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceiveBookData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReceiveBookData.ForeColor = System.Drawing.Color.White;
             this.btnReceiveBookData.Location = new System.Drawing.Point(0, 162);
             this.btnReceiveBookData.Name = "btnReceiveBookData";
             this.btnReceiveBookData.Size = new System.Drawing.Size(306, 59);
@@ -272,12 +275,12 @@
             // 
             // btnReceiveMoneyData
             // 
-            this.btnReceiveMoneyData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnReceiveMoneyData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReceiveMoneyData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReceiveMoneyData.FlatAppearance.BorderSize = 0;
             this.btnReceiveMoneyData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceiveMoneyData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceiveMoneyData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReceiveMoneyData.ForeColor = System.Drawing.Color.White;
             this.btnReceiveMoneyData.Location = new System.Drawing.Point(0, 106);
             this.btnReceiveMoneyData.Name = "btnReceiveMoneyData";
             this.btnReceiveMoneyData.Size = new System.Drawing.Size(306, 56);
@@ -288,12 +291,12 @@
             // 
             // btnBillData
             // 
-            this.btnBillData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnBillData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBillData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBillData.FlatAppearance.BorderSize = 0;
             this.btnBillData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBillData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBillData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBillData.ForeColor = System.Drawing.Color.White;
             this.btnBillData.Location = new System.Drawing.Point(0, 49);
             this.btnBillData.Name = "btnBillData";
             this.btnBillData.Size = new System.Drawing.Size(306, 57);
@@ -304,7 +307,7 @@
             // 
             // btnSellMenu
             // 
-            this.btnSellMenu.BackColor = System.Drawing.Color.Purple;
+            this.btnSellMenu.BackColor = System.Drawing.Color.Black;
             this.btnSellMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSellMenu.FlatAppearance.BorderSize = 0;
             this.btnSellMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -337,12 +340,12 @@
             // 
             // btnCategoryAndAuthor
             // 
-            this.btnCategoryAndAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCategoryAndAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCategoryAndAuthor.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategoryAndAuthor.FlatAppearance.BorderSize = 0;
             this.btnCategoryAndAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoryAndAuthor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoryAndAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCategoryAndAuthor.ForeColor = System.Drawing.Color.White;
             this.btnCategoryAndAuthor.Location = new System.Drawing.Point(0, 162);
             this.btnCategoryAndAuthor.Name = "btnCategoryAndAuthor";
             this.btnCategoryAndAuthor.Size = new System.Drawing.Size(306, 59);
@@ -353,12 +356,12 @@
             // 
             // btnCustomerData
             // 
-            this.btnCustomerData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCustomerData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCustomerData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomerData.FlatAppearance.BorderSize = 0;
             this.btnCustomerData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCustomerData.ForeColor = System.Drawing.Color.White;
             this.btnCustomerData.Location = new System.Drawing.Point(0, 106);
             this.btnCustomerData.Name = "btnCustomerData";
             this.btnCustomerData.Size = new System.Drawing.Size(306, 56);
@@ -369,12 +372,12 @@
             // 
             // btnBookData
             // 
-            this.btnBookData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnBookData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBookData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBookData.FlatAppearance.BorderSize = 0;
             this.btnBookData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookData.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBookData.ForeColor = System.Drawing.Color.White;
             this.btnBookData.Location = new System.Drawing.Point(0, 49);
             this.btnBookData.Name = "btnBookData";
             this.btnBookData.Size = new System.Drawing.Size(306, 57);
@@ -385,7 +388,7 @@
             // 
             // btnDataMenu
             // 
-            this.btnDataMenu.BackColor = System.Drawing.Color.Purple;
+            this.btnDataMenu.BackColor = System.Drawing.Color.Black;
             this.btnDataMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDataMenu.FlatAppearance.BorderSize = 0;
             this.btnDataMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -405,7 +408,8 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.lbAddress);
             this.panel4.Controls.Add(this.lbEmail);
             this.panel4.Controls.Add(this.lblPhone);
@@ -426,6 +430,15 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(306, 324);
             this.panel4.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.DimGray;
+            this.label10.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label10.Location = new System.Drawing.Point(-2, 320);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(312, 4);
+            this.label10.TabIndex = 16;
             // 
             // lbAddress
             // 
@@ -594,7 +607,7 @@
             // 
             this.MenuPanel.AutoScroll = true;
             this.MenuPanel.AutoScrollMinSize = new System.Drawing.Size(1, 0);
-            this.MenuPanel.BackColor = System.Drawing.Color.Purple;
+            this.MenuPanel.BackColor = System.Drawing.Color.Black;
             this.MenuPanel.Controls.Add(this.panel4);
             this.MenuPanel.Controls.Add(this.panelManageData);
             this.MenuPanel.Controls.Add(this.panel1);
@@ -611,11 +624,23 @@
             // 
             this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelChildForm.BackColor = System.Drawing.Color.Plum;
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelChildForm.Controls.Add(this.label11);
             this.panelChildForm.Location = new System.Drawing.Point(315, 3);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1282, 997);
             this.panelChildForm.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(567, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(243, 72);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Quản lý nhà sách";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // MainUI
             // 
@@ -635,6 +660,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.MenuPanel.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -682,5 +708,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
