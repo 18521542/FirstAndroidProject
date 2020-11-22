@@ -105,6 +105,12 @@
     <Compile Include="Forms__EmployeeAndRule\FormEmployee.Designer.cs">
       <DependentUpon>FormEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms__Selling-Function\FinishOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms__Selling-Function\FinishOrder.Designer.cs">
+      <DependentUpon>FinishOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms__Selling-Function\FormReceiveBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms__EmployeeAndRule\FormEmployee.resx">
       <DependentUpon>FormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms__Selling-Function\FinishOrder.resx">
+      <DependentUpon>FinishOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms__Selling-Function\FormReceiveBook.resx">
       <DependentUpon>FormReceiveBook.cs</DependentUpon>

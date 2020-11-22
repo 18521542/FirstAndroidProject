@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI_Tier.FormsForSelling_Function
+namespace GUI_Tier.Forms__Selling_Function
 {
-    public partial class FormSellBook : Form
+    public partial class FinishOrder : Form
     {
-        public FormSellBook()
+        public FinishOrder()
         {
             InitializeComponent();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
