@@ -56,7 +56,6 @@ namespace GUI_Tier
                     MessageBox.Show("Thêm tác giả thành công");
                     listviewAuthors.Items.Clear();
                     ShowListAuthors();
-                    textboxAuthor.Text = "";
                 }
                 else
                     MessageBox.Show("Thêm tác giả thất bại");

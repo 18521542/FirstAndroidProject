@@ -29,25 +29,21 @@ namespace GUI_Tier
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            if (!isClicked)
+            TableUser.Items.Clear();
+            listAccount = control.GetAllAccounts();
+            int stt = 0;
+            foreach (AccountDTO acc in listAccount)
             {
-                listAccount = control.GetAllAccounts();
-                int stt = 0;
-                foreach (AccountDTO acc in listAccount)
-                {
-                    TableUser.Items.Add(acc.getUsername());
-                    TableUser.Items[stt].SubItems.Add(acc.getPassword());
-                    TableUser.Items[stt].SubItems.Add(acc.getType().ToString());
-                    TableUser.Items[stt].SubItems.Add(acc.getRealName());
-                    TableUser.Items[stt].SubItems.Add(acc.getPhoneNumber());
-                    TableUser.Items[stt].SubItems.Add(acc.getEmail());
-                    TableUser.Items[stt].SubItems.Add(acc.getAddress());
-                    stt++;
-                }
-                MessageBox.Show("Da lay het danh sach tai khoan");
-                isClicked = true;
+                TableUser.Items.Add(acc.getUsername());
+                TableUser.Items[stt].SubItems.Add(acc.getPassword());
+                TableUser.Items[stt].SubItems.Add(acc.getType().ToString());
+                TableUser.Items[stt].SubItems.Add(acc.getRealName());
+                TableUser.Items[stt].SubItems.Add(acc.getPhoneNumber());
+                TableUser.Items[stt].SubItems.Add(acc.getEmail());
+                TableUser.Items[stt].SubItems.Add(acc.getAddress());
+                stt++;
             }
-            
+            MessageBox.Show("Da lay het danh sach tai khoan");  
         }
 
         private void button3_Click(object sender, EventArgs e)
