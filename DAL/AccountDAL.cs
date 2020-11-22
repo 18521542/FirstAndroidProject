@@ -17,7 +17,6 @@ namespace DAL
                 bool rs = false;
                 DatabaseAccess.getInstance().getConnect();
                 MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
-                //cmd.CommandText = "Select * from Account where username = '" + username + "' and password = '" + password + " ' ";
                 cmd.CommandText = "Call USP_Login('" + username + "','" + password + "')";
                 MySqlDataReader reader = cmd.ExecuteReader();
 
