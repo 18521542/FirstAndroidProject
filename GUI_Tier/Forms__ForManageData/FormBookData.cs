@@ -33,9 +33,12 @@ namespace GUI_Tier
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Forms__ForManageData.AddBook addbook = new Forms__ForManageData.AddBook();
-            addbook.SetDesktopLocation(0, 0);
-            addbook.Show();
+            if (!Forms__ForManageData.AddBook.getInstance().isShown)
+            {
+                Forms__ForManageData.AddBook.getInstance().isShown = true;
+                Forms__ForManageData.AddBook.getInstance().Show();
+            }
+                
         }
     }
 }

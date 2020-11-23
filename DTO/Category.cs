@@ -11,6 +11,9 @@ namespace DTO
         private string id;
         private string name;
 
-        
+        public string Id() { return this.id; }
+        public string Name() { return this.name; }
+
+        public Category(string _id, string _name) { this.id = _id; this.name = _name; }
     }
 }

@@ -16,17 +16,22 @@ namespace GUI_Tier
     {
         private AuthorBLL AuthorController = null;
         private List<Author> listAuthor = null;
+
+        private CategoryBLL categoryController = null;
+        private List<Category> listCategories = null;
+        
         public FormCategoryAndAuthorData()
         {
             InitializeComponent();
+
             AuthorController = new AuthorBLL();
             listAuthor = new List<Author>();
+
+            categoryController = new CategoryBLL();
+            listCategories = new List<Category>();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -56,6 +61,7 @@ namespace GUI_Tier
                     MessageBox.Show("Thêm tác giả thành công");
                     listviewAuthors.Items.Clear();
                     ShowListAuthors();
+                    textboxAuthor.Text = "";
                 }
                 else
                     MessageBox.Show("Thêm tác giả thất bại");
@@ -72,6 +78,42 @@ namespace GUI_Tier
                 listviewAuthors.Items[stt].SubItems.Add(author.Id());
                 listviewAuthors.Items[stt].SubItems.Add(author.Name());
                 stt++;
+            }
+        }
+
+        private void ShowListCategories()
+        {
+            listCategories = categoryController.GetCategories();
+            int stt = 0;
+            foreach (Category cat in listCategories)
+            {
+                listviewCategories.Items.Add(stt.ToString());
+                listviewCategories.Items[stt].SubItems.Add(cat.Id());
+                listviewCategories.Items[stt].SubItems.Add(cat.Name());
+                stt++;
+            }
+        }
+
+        private void btnRefreshCategory_Click(object sender, EventArgs e)
+        {
+            listviewCategories.Items.Clear();
+            ShowListCategories();
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            string CategoryName = textboxAddCategory.Text;
+            if (!string.IsNullOrEmpty(CategoryName))
+            {
+                if (categoryController.AddCategory(CategoryName))
+                {
+                    MessageBox.Show("Thêm thể loại thành công");
+                    listviewCategories.Items.Clear();
+                    ShowListCategories();
+                    textboxAddCategory.Text = "";
+                }
+                else
+                    MessageBox.Show("Thêm thể loại thất bại");
             }
         }
     }

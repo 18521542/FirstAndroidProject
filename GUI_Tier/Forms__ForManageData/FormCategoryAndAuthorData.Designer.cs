@@ -37,8 +37,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.textboxAddCategory = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -49,7 +49,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.textboxAuthor = new System.Windows.Forms.TextBox();
-            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnRefreshCategory = new System.Windows.Forms.Button();
             this.btnRefreshAuthor = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,8 +70,8 @@
             this.panel2.Controls.Add(this.listviewCategories);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btnAddCategory);
+            this.panel2.Controls.Add(this.textboxAddCategory);
             this.panel2.Location = new System.Drawing.Point(52, 167);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -137,27 +137,28 @@
             this.textBox2.Size = new System.Drawing.Size(502, 22);
             this.textBox2.TabIndex = 2;
             // 
-            // button1
+            // btnAddCategory
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(454, 60);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategory.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
+            this.btnAddCategory.Location = new System.Drawing.Point(454, 60);
+            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(100, 37);
+            this.btnAddCategory.TabIndex = 1;
+            this.btnAddCategory.Text = "Thêm";
+            this.btnAddCategory.UseVisualStyleBackColor = false;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
-            // textBox1
+            // textboxAddCategory
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 75);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(442, 22);
-            this.textBox1.TabIndex = 0;
+            this.textboxAddCategory.Location = new System.Drawing.Point(4, 75);
+            this.textboxAddCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxAddCategory.Name = "textboxAddCategory";
+            this.textboxAddCategory.Size = new System.Drawing.Size(442, 22);
+            this.textboxAddCategory.TabIndex = 0;
             // 
             // panel3
             // 
@@ -258,20 +259,20 @@
             this.textboxAuthor.Size = new System.Drawing.Size(401, 22);
             this.textboxAuthor.TabIndex = 5;
             // 
-            // btnCategory
+            // btnRefreshCategory
             // 
-            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCategory.ForeColor = System.Drawing.Color.White;
-            this.btnCategory.Location = new System.Drawing.Point(476, 812);
-            this.btnCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(139, 48);
-            this.btnCategory.TabIndex = 6;
-            this.btnCategory.Text = "Refresh";
-            this.btnCategory.UseVisualStyleBackColor = false;
-            this.btnCategory.Click += new System.EventHandler(this.button3_Click);
+            this.btnRefreshCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRefreshCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefreshCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnRefreshCategory.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshCategory.Location = new System.Drawing.Point(476, 812);
+            this.btnRefreshCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefreshCategory.Name = "btnRefreshCategory";
+            this.btnRefreshCategory.Size = new System.Drawing.Size(139, 48);
+            this.btnRefreshCategory.TabIndex = 6;
+            this.btnRefreshCategory.Text = "Refresh";
+            this.btnRefreshCategory.UseVisualStyleBackColor = false;
+            this.btnRefreshCategory.Click += new System.EventHandler(this.btnRefreshCategory_Click);
             // 
             // btnRefreshAuthor
             // 
@@ -295,7 +296,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1267, 997);
             this.Controls.Add(this.btnRefreshAuthor);
-            this.Controls.Add(this.btnCategory);
+            this.Controls.Add(this.btnRefreshCategory);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -325,8 +326,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.TextBox textboxAddCategory;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ListView listviewAuthors;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -335,7 +336,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.TextBox textboxAuthor;
-        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnRefreshCategory;
         private System.Windows.Forms.Button btnRefreshAuthor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

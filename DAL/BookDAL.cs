@@ -90,7 +90,7 @@ namespace DAL
             return book;
         }
 
-        public bool UpdateBook(string id, String name, String categoryID, List<string> authorsID, string publishCompany, int publishYear)
+        public bool UpdateBook(string id, string name, string categoryID, List<string> authorsID, string publishCompany, int publishYear)
         {
             string SQL_UpdateBook = "call USP_UpdateBook('" + id + "','" + name + "','" + categoryID + "','" + publishCompany + "','" + publishYear + "')";
             try
