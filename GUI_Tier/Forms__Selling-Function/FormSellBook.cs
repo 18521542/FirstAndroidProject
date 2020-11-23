@@ -21,5 +21,10 @@ namespace GUI_Tier.FormsForSelling_Function
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
