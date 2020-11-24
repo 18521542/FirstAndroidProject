@@ -20,6 +20,15 @@ namespace GUI_Tier
             bookController = new BookBLL();
         }
 
+        private void myListView_ItemClick(object sender, EventArgs e)
+        {
+            string id = this.listviewBooks.SelectedItems[0].SubItems[1].Text;
+            if (!Forms__ForManageData.FormBookInfo.getInstance().isShown)
+            {
+                Forms__ForManageData.FormBookInfo.getInstance().Show();
+                Forms__ForManageData.FormBookInfo.getInstance().LoadForm(id);
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
 

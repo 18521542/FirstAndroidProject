@@ -26,7 +26,24 @@ namespace GUI_Tier.Forms__ForManageData
 
         public bool isShown = false;
 
-        private void LoadCombobox(List<Author> listAut, ref ComboBox cbbAuthor, List<Category> listCate, ref ComboBox cbbCate)
+        public AddBook()
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+
+            //init properties
+            AuthorController = new AuthorBLL();
+            CategoryController = new CategoryBLL();
+            AuthorsList = new List<Button>();
+            RemovedButton = new Button();
+            BookController = new BookBLL();
+
+            LoadData();
+            //LoadEventForListAuthors();
+        }
+        
+        public void LoadCombobox(List<Author> listAut, ref ComboBox cbbAuthor, List<Category> listCate, ref ComboBox cbbCate)
         {
             foreach (Author item in listAut)
             {
@@ -45,28 +62,12 @@ namespace GUI_Tier.Forms__ForManageData
                 CategoryController.GetCategories(),
                 ref cbbCategory);
         }
+
         public static AddBook getInstance()
         {
             if (instance == null)
                 instance = new AddBook();
             return instance;
-        }
-
-        public AddBook()
-        {
-            InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(0, 0);
-
-            //init properties
-            AuthorController = new AuthorBLL();
-            CategoryController = new CategoryBLL();
-            AuthorsList = new List<Button>();
-            RemovedButton = new Button();
-            BookController = new BookBLL();
-
-            LoadData();
-            //LoadEventForListAuthors();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,11 +78,21 @@ namespace GUI_Tier.Forms__ForManageData
 
         private void cbbAuthors_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string AuthorName = cbbAuthors.SelectedItem.ToString();
+            foreach (Button author in listTacGia.Controls)
+            {
+                if (author.Text.Contains(AuthorName))
+                {
+                    MessageBox.Show("Bi trung tac gia");
+                    return;
+                }
+            }
+
+            //create button
             Button Author = new Button();
-            Author.Text = cbbAuthors.SelectedItem.ToString();
+            Author.Text = AuthorName;
             Author.AutoSize = true;
             Author.Click += new System.EventHandler(this.RemoveFromListButton);
-
             listTacGia.Controls.Add(Author);
         }
 
@@ -91,7 +102,10 @@ namespace GUI_Tier.Forms__ForManageData
             {
                 if (item.Tag == sender || item == sender)
                 {
-                    listTacGia.Controls.Remove(item);
+                    if (listTacGia.Controls.Count > 1)
+                        listTacGia.Controls.Remove(item);
+                    else
+                        MessageBox.Show("Sach phai co it nhat 1 tac gia");
                 }
             }
         }

@@ -55,7 +55,7 @@ namespace DAL
 
         public Book getBookByID(string bookID)
         {
-            String SQL = "call USP_GetBookByID(\"" + bookID + "\")";
+            String SQL = "call USP_GetBookByID('" + bookID + "')";
             Book book = null;
             try
             {
@@ -75,7 +75,7 @@ namespace DAL
 
                     Category category = (new CategoryDAL()).getCategoryByBook(reader.GetString("MaSach"));
 
-                    String publishCompany = reader.GetString("NhaXuatBan");
+                    string publishCompany = reader.GetString("NhaXuatBan");
 
                     int publishYear = Int32.Parse(reader.GetString("NamXuatBan"));
 

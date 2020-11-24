@@ -40,7 +40,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +70,7 @@
             // 
             // listviewBooks
             // 
+            this.listviewBooks.Activation = System.Windows.Forms.ItemActivation.TwoClick;
             this.listviewBooks.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listviewBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.STT,
@@ -87,6 +87,7 @@
             this.listviewBooks.TabIndex = 21;
             this.listviewBooks.UseCompatibleStateImageBehavior = false;
             this.listviewBooks.View = System.Windows.Forms.View.Details;
+            this.listviewBooks.ItemActivate += new System.EventHandler(this.myListView_ItemClick);
             // 
             // STT
             // 
@@ -156,21 +157,11 @@
             this.richTextBox1.TabIndex = 23;
             this.richTextBox1.Text = "";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(931, 806);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 46);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Detail";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(804, 805);
+            this.button2.Location = new System.Drawing.Point(906, 805);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 46);
+            this.button2.Size = new System.Drawing.Size(146, 50);
             this.button2.TabIndex = 26;
             this.button2.Text = "Show";
             this.button2.UseVisualStyleBackColor = true;
@@ -183,7 +174,6 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1213, 864);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.listviewBooks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
@@ -210,7 +200,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         //private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
     }

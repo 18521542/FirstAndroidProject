@@ -34,14 +34,14 @@ namespace GUI_Tier.Forms__ForManageData
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.cbbAuthors = new System.Windows.Forms.ComboBox();
+            this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.textboxYear = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textboxCompany = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textboxName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,7 +55,8 @@ namespace GUI_Tier.Forms__ForManageData
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.labelID = new System.Windows.Forms.Label();
+            this.listTacGia = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -111,15 +112,16 @@ namespace GUI_Tier.Forms__ForManageData
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.listTacGia);
+            this.panel3.Controls.Add(this.labelID);
+            this.panel3.Controls.Add(this.btnUpdate);
+            this.panel3.Controls.Add(this.cbbAuthors);
+            this.panel3.Controls.Add(this.cbbCategory);
+            this.panel3.Controls.Add(this.textboxYear);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.textboxCompany);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.textboxName);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
@@ -130,48 +132,49 @@ namespace GUI_Tier.Forms__ForManageData
             this.panel3.Size = new System.Drawing.Size(532, 659);
             this.panel3.TabIndex = 2;
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(365, 599);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 32);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Cập nhật";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(365, 599);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(109, 32);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox2
+            // cbbAuthors
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(188, 279);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(285, 24);
-            this.comboBox2.TabIndex = 11;
+            this.cbbAuthors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAuthors.FormattingEnabled = true;
+            this.cbbAuthors.Location = new System.Drawing.Point(157, 279);
+            this.cbbAuthors.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbAuthors.Name = "cbbAuthors";
+            this.cbbAuthors.Size = new System.Drawing.Size(316, 24);
+            this.cbbAuthors.TabIndex = 11;
+            this.cbbAuthors.SelectedIndexChanged += new System.EventHandler(this.cbbAuthors_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cbbCategory
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(188, 213);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(285, 24);
-            this.comboBox1.TabIndex = 10;
+            this.cbbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCategory.FormattingEnabled = true;
+            this.cbbCategory.Location = new System.Drawing.Point(157, 214);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbCategory.Name = "cbbCategory";
+            this.cbbCategory.Size = new System.Drawing.Size(316, 24);
+            this.cbbCategory.TabIndex = 10;
             // 
-            // textBox4
+            // textboxYear
             // 
-            this.textBox4.Location = new System.Drawing.Point(188, 547);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(285, 22);
-            this.textBox4.TabIndex = 9;
+            this.textboxYear.Location = new System.Drawing.Point(188, 547);
+            this.textboxYear.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxYear.Name = "textboxYear";
+            this.textboxYear.Size = new System.Drawing.Size(285, 22);
+            this.textboxYear.TabIndex = 9;
             // 
             // label8
             // 
@@ -184,13 +187,13 @@ namespace GUI_Tier.Forms__ForManageData
             this.label8.TabIndex = 8;
             this.label8.Text = "Năm xuất bản:";
             // 
-            // textBox3
+            // textboxCompany
             // 
-            this.textBox3.Location = new System.Drawing.Point(188, 493);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 22);
-            this.textBox3.TabIndex = 7;
+            this.textboxCompany.Location = new System.Drawing.Point(188, 493);
+            this.textboxCompany.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxCompany.Name = "textboxCompany";
+            this.textboxCompany.Size = new System.Drawing.Size(285, 22);
+            this.textboxCompany.TabIndex = 7;
             // 
             // label7
             // 
@@ -203,13 +206,13 @@ namespace GUI_Tier.Forms__ForManageData
             this.label7.TabIndex = 6;
             this.label7.Text = "Nhà xuất bản:";
             // 
-            // textBox1
+            // textboxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 142);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 22);
-            this.textBox1.TabIndex = 4;
+            this.textboxName.Location = new System.Drawing.Point(157, 142);
+            this.textboxName.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxName.Name = "textboxName";
+            this.textboxName.Size = new System.Drawing.Size(316, 22);
+            this.textboxName.TabIndex = 4;
             // 
             // label6
             // 
@@ -333,13 +336,25 @@ namespace GUI_Tier.Forms__ForManageData
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel5
+            // labelID
             // 
-            this.panel5.BackColor = System.Drawing.Color.Khaki;
-            this.panel5.Location = new System.Drawing.Point(32, 310);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(442, 156);
-            this.panel5.TabIndex = 13;
+            this.labelID.BackColor = System.Drawing.Color.DarkRed;
+            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelID.Location = new System.Drawing.Point(157, 68);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(316, 23);
+            this.labelID.TabIndex = 14;
+            this.labelID.Text = "1";
+            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listTacGia
+            // 
+            this.listTacGia.BackColor = System.Drawing.Color.Khaki;
+            this.listTacGia.Location = new System.Drawing.Point(32, 316);
+            this.listTacGia.Name = "listTacGia";
+            this.listTacGia.Size = new System.Drawing.Size(441, 145);
+            this.listTacGia.TabIndex = 15;
             // 
             // FormBookInfo
             // 
@@ -376,16 +391,16 @@ namespace GUI_Tier.Forms__ForManageData
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textboxYear;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textboxCompany;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textboxName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbAuthors;
+        private System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -393,8 +408,9 @@ namespace GUI_Tier.Forms__ForManageData
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.FlowLayoutPanel listTacGia;
     }
 }

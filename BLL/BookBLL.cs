@@ -27,5 +27,9 @@ namespace BLL
         {
             return this.bookDAL.AddBook(name, categoryID, authorsID, publishCompany, publishYear);
         }
+        public Book GetBookByID(string id)
+        {
+            return bookDAL.getBookByID(id);
+        }
     }
 }
