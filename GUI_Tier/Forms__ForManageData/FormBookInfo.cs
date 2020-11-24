@@ -96,27 +96,69 @@ namespace GUI_Tier.Forms__ForManageData
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                bool NameNull = string.IsNullOrEmpty(textboxName.Text);
+                bool YearNull = string.IsNullOrEmpty(textboxYear.Text);
+                bool CompanyNull = string.IsNullOrEmpty(textboxCompany.Text);
+                bool CategoryNull = string.IsNullOrEmpty(cbbCategory.SelectedItem.ToString());
+                bool AuthorsNull = (listTacGia == null);
+
+                if (!NameNull && !YearNull && !CompanyNull && !CategoryNull && !AuthorsNull)
+                {
+                    string id = labelID.Text;
+                    string name = textboxName.Text;
+                    int year = Int32.Parse(textboxYear.Text);
+                    string company = textboxCompany.Text;
+
+                    //get category
+                    string category = cbbCategory.SelectedItem.ToString();
+                    string categoryID = CategoryController.GetCategoryIDByName(category);
+
+                    //get authors
+                    List<string> authorsID = new List<string>();
+                    foreach (Button author in listTacGia.Controls)
+                    {
+                        authorsID.Add(AuthorController.GetAuthorIDByName(author.Text));
+                    }
+
+                    if (BookController.UpdateBook(id,name, categoryID, authorsID, company, year))
+                    {
+                        MessageBox.Show("Update thanh cong");
+                        Clear();
+                    }
+                    else
+                        MessageBox.Show("Update that bai");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thong tin khong hop le");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             isShown = false;
+            Clear();
         }
 
         private void cbbAuthors_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string AuthorName = cbbAuthors.SelectedItem.ToString();
-            foreach(Button author in listTacGia.Controls)
+            if(cbbAuthors.SelectedItem != null)
             {
-                if (author.Text.Contains(AuthorName))
+                string AuthorName = cbbAuthors.SelectedItem.ToString();
+                foreach (Button author in listTacGia.Controls)
                 {
-                    MessageBox.Show("Bi trung tac gia");
-                    return;
+                    if (author.Text.Contains(AuthorName))
+                    {
+                        MessageBox.Show("Bi trung tac gia");
+                        return;
+                    }
                 }
+                CreateButton(AuthorName);
             }
-            CreateButton(AuthorName);
         }
 
         private void CreateButton(string buttonName)
@@ -126,6 +168,16 @@ namespace GUI_Tier.Forms__ForManageData
             Author.AutoSize = true;
             Author.Click += new System.EventHandler(this.RemoveFromListButton);
             listTacGia.Controls.Add(Author);
+        }
+
+        private void Clear()
+        {
+            textboxCompany.Text = "";
+            textboxName.Text = "";
+            textboxYear.Text = "";
+            listTacGia.Controls.Clear();
+            cbbCategory.SelectedItem = null;
+            cbbAuthors.SelectedItem = null;
         }
     }
 }

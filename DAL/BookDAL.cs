@@ -93,39 +93,29 @@ namespace DAL
 
         public bool UpdateBook(string id, string name, string categoryID, List<string> authorsID, string publishCompany, int publishYear)
         {
-            string SQL_UpdateBook = "call USP_UpdateBook('" + id + "','" + name + "','" + categoryID + "','" + publishCompany + "','" + publishYear + "')";
+            string SQL = "call USP_UpdateBook('" +id + "','" + name + "','" + categoryID + "','" + publishCompany + "','" + publishYear + "')";
             try
             {
                 DatabaseAccess.getInstance().getConnect();
-
                 MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
-                MySqlCommand cmd2 = DatabaseAccess.getInstance().conn.CreateCommand();
-
-                cmd.CommandText = SQL_UpdateBook;
+                cmd.CommandText = SQL;
                 MySqlDataReader reader1 = cmd.ExecuteReader();
+                DatabaseAccess.getInstance().getClose();
 
-                MySqlDataReader reader2 = null;
-                //for (int i = 0; i < authorsID.Count(); i++)
-                //{
-                //    string SQL_UpdateBookAuthor = "call USP_UpdateBookAuthor('" + id + "','" + authorsID. + "')";
-                //    cmd2.CommandText = SQL_UpdateBookAuthor;
-                //    reader2 = cmd2.ExecuteReader();
-                //    if (!reader2.Read())
-                //    {
-                //        DatabaseAccess.getInstance().getClose();
-                //        return false;
-                //    }
-                //}
-                if (reader1.Read())
+                for (int i = 0; i < authorsID.Count(); i++)
                 {
+                    string SQL_UpdateBookAuthor = "call USP_UpdateBookAuthor('" + id + "','" + authorsID[i] + "')";
+
+                    DatabaseAccess.getInstance().getConnect();
+
+                    //execute
+                    MySqlCommand cmd2 = DatabaseAccess.getInstance().conn.CreateCommand();
+                    cmd2.CommandText = SQL_UpdateBookAuthor;
+                    MySqlDataReader reader2 = cmd2.ExecuteReader();
+
                     DatabaseAccess.getInstance().getClose();
-                    return true;
                 }
-                else
-                {
-                    DatabaseAccess.getInstance().getClose();
-                    return false;
-                }
+                return true;
             }
             catch (Exception e) { return false; }
         }
