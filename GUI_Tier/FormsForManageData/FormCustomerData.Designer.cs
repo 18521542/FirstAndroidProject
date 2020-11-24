@@ -34,16 +34,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -63,11 +63,11 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -134,56 +134,22 @@
             this.panel3.Size = new System.Drawing.Size(481, 237);
             this.panel3.TabIndex = 2;
             // 
-            // label3
+            // textBox5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(10, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tên KH";
+            this.textBox5.Location = new System.Drawing.Point(75, 194);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(342, 20);
+            this.textBox5.TabIndex = 9;
             // 
-            // textBox1
+            // label7
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(342, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(75, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(342, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(10, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Email";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(75, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(342, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(10, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Địa chỉ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(10, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 16);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "SĐT";
             // 
             // textBox4
             // 
@@ -202,22 +168,56 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Tiền nợ";
             // 
-            // textBox5
+            // textBox3
             // 
-            this.textBox5.Location = new System.Drawing.Point(75, 194);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(342, 20);
-            this.textBox5.TabIndex = 9;
+            this.textBox3.Location = new System.Drawing.Point(75, 108);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(342, 20);
+            this.textBox3.TabIndex = 5;
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(10, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 16);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "SĐT";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(10, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Địa chỉ";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(75, 63);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(342, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(10, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Email";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(75, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(342, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(10, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tên KH";
             // 
             // panel4
             // 
@@ -402,6 +402,8 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
+            this.listView2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(5, 564);
             this.listView2.Name = "listView2";
@@ -409,6 +411,23 @@
             this.listView2.TabIndex = 14;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "STT";
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Mã khách hàng";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 440;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Tên khách hàng";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 370;
             // 
             // textBox6
             // 
@@ -428,23 +447,6 @@
             this.button5.Size = new System.Drawing.Size(26, 20);
             this.button5.TabIndex = 16;
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "STT";
-            this.columnHeader5.Width = 100;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Mã khách hàng";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 440;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Tên khách hàng";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 370;
             // 
             // FormCustomerData
             // 
