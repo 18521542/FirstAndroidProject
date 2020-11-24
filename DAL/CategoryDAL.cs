@@ -10,9 +10,25 @@ namespace DAL
 {
     public class CategoryDAL
     {
-        public Category getCategoryByBook(string v)
+        public Category getCategoryByBook(string bookID)
         {
-            throw new NotImplementedException();
+            string SQL = "call USP_GetCategoryByBook('" + bookID + "')";
+            Category category = null;
+            try
+            {
+                DatabaseAccess.getInstance().getConnect();
+                MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+                cmd.CommandText = SQL;
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    category = new Category(reader.GetString("MaTheLoai"), reader.GetString("TenTheLoai"));
+                }
+                DatabaseAccess.getInstance().getClose();
+            }
+            catch (Exception e) { }
+            return category;
         }
 
         public List<Category> getCategories()
@@ -79,6 +95,21 @@ namespace DAL
                 Console.WriteLine(e.ToString());
             }
             return list;
+        }
+
+        public string GetCategoryIDByName(string name)
+        {
+            string rs = "";
+            string SQL = "Select MaTheLoai from THELOAISACH where TENTHELOAI ='" + name + "'";
+            DatabaseAccess.getInstance().getConnect();
+            MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+            cmd.CommandText = SQL;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                rs = reader.GetString("MaTheLoai");
+            }
+            return rs;
         }
     }
 }

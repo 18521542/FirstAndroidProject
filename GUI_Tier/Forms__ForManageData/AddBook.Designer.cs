@@ -32,19 +32,20 @@ namespace GUI_Tier.Forms__ForManageData
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.listTacGia = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbbAuthors = new System.Windows.Forms.ComboBox();
+            this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textboxYear = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textboxCompany = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textboxBookName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -75,18 +76,19 @@ namespace GUI_Tier.Forms__ForManageData
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.listTacGia);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbbAuthors);
+            this.panel2.Controls.Add(this.cbbCategory);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textboxYear);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textboxCompany);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textboxBookName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(49, 140);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -94,64 +96,86 @@ namespace GUI_Tier.Forms__ForManageData
             this.panel2.Size = new System.Drawing.Size(511, 550);
             this.panel2.TabIndex = 1;
             // 
-            // button2
+            // label6
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(337, 472);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(194, 214);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(257, 29);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "--Chọn tác giả--";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // listTacGia
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(28, 472);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 46);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.listTacGia.BackColor = System.Drawing.Color.Khaki;
+            this.listTacGia.Location = new System.Drawing.Point(28, 249);
+            this.listTacGia.Name = "listTacGia";
+            this.listTacGia.Size = new System.Drawing.Size(450, 216);
+            this.listTacGia.TabIndex = 11;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(337, 472);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(143, 46);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Thoát";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSave.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(28, 472);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(144, 46);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(24, 187);
+            this.label7.Location = new System.Drawing.Point(24, 217);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 22);
             this.label7.TabIndex = 10;
             this.label7.Text = "Danh sách tác giả";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // comboBox2
+            // cbbAuthors
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(26, 213);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(452, 28);
-            this.comboBox2.TabIndex = 9;
+            this.cbbAuthors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbAuthors.FormattingEnabled = true;
+            this.cbbAuthors.Location = new System.Drawing.Point(194, 214);
+            this.cbbAuthors.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbAuthors.Name = "cbbAuthors";
+            this.cbbAuthors.Size = new System.Drawing.Size(284, 28);
+            this.cbbAuthors.TabIndex = 9;
+            this.cbbAuthors.SelectedIndexChanged += new System.EventHandler(this.cbbAuthors_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cbbCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 148);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cbbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCategory.FormattingEnabled = true;
+            this.cbbCategory.Location = new System.Drawing.Point(194, 148);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbCategory.Name = "cbbCategory";
+            this.cbbCategory.Size = new System.Drawing.Size(286, 24);
+            this.cbbCategory.TabIndex = 7;
             // 
             // label5
             // 
@@ -164,13 +188,13 @@ namespace GUI_Tier.Forms__ForManageData
             this.label5.TabIndex = 6;
             this.label5.Text = "Thể loại";
             // 
-            // textBox3
+            // textboxYear
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 107);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(286, 22);
-            this.textBox3.TabIndex = 5;
+            this.textboxYear.Location = new System.Drawing.Point(194, 107);
+            this.textboxYear.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxYear.Name = "textboxYear";
+            this.textboxYear.Size = new System.Drawing.Size(286, 22);
+            this.textboxYear.TabIndex = 5;
             // 
             // label4
             // 
@@ -183,13 +207,13 @@ namespace GUI_Tier.Forms__ForManageData
             this.label4.TabIndex = 4;
             this.label4.Text = "Năm xuất bản";
             // 
-            // textBox2
+            // textboxCompany
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 65);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 22);
-            this.textBox2.TabIndex = 3;
+            this.textboxCompany.Location = new System.Drawing.Point(194, 65);
+            this.textboxCompany.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxCompany.Name = "textboxCompany";
+            this.textboxCompany.Size = new System.Drawing.Size(286, 22);
+            this.textboxCompany.TabIndex = 3;
             // 
             // label3
             // 
@@ -202,13 +226,13 @@ namespace GUI_Tier.Forms__ForManageData
             this.label3.TabIndex = 2;
             this.label3.Text = "Nhà xuất bản";
             // 
-            // textBox1
+            // textboxBookName
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 22);
-            this.textBox1.TabIndex = 1;
+            this.textboxBookName.Location = new System.Drawing.Point(194, 25);
+            this.textboxBookName.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxBookName.Name = "textboxBookName";
+            this.textboxBookName.Size = new System.Drawing.Size(286, 22);
+            this.textboxBookName.TabIndex = 1;
             // 
             // label2
             // 
@@ -220,15 +244,6 @@ namespace GUI_Tier.Forms__ForManageData
             this.label2.Size = new System.Drawing.Size(81, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên sách";
-            // 
-            // listTacGia
-            // 
-            this.listTacGia.AutoSize = true;
-            this.listTacGia.BackColor = System.Drawing.Color.Khaki;
-            this.listTacGia.Location = new System.Drawing.Point(28, 249);
-            this.listTacGia.Name = "listTacGia";
-            this.listTacGia.Size = new System.Drawing.Size(450, 216);
-            this.listTacGia.TabIndex = 11;
             // 
             // AddBook
             // 
@@ -257,16 +272,17 @@ namespace GUI_Tier.Forms__ForManageData
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbAuthors;
+        private System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textboxYear;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textboxCompany;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textboxBookName;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.FlowLayoutPanel listTacGia;
+        private System.Windows.Forms.Label label6;
     }
 }

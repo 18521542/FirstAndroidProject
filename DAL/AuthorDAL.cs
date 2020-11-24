@@ -10,9 +10,26 @@ namespace DAL
 {
     public class AuthorDAL
     {
-        public List<Author> getAuthorByBook(string v)
+        public List<Author> getAuthorByBook(string bookID)
         {
-            throw new NotImplementedException();
+            string SQL = "call USP_GetAuthorByBook('" + bookID + "')";
+            List<Author> list = new List<Author>();
+            try
+            {
+                DatabaseAccess.getInstance().getConnect();
+
+                MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+                cmd.CommandText = SQL;
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Author(reader.GetString("MaTacGia"), reader.GetString("TenTacGia")));
+                }
+                DatabaseAccess.getInstance().getClose();
+            }
+            catch (Exception e) { }
+            return list;
         }
 
         public List<Author> getAuthors()
@@ -79,6 +96,21 @@ namespace DAL
                 Console.WriteLine(e.ToString());
             }
             return list;
-        }  
+        }
+
+        public string GetAuthorIDByName(string name)
+        {
+            string rs = "";
+            string SQL = "Select MaTacGia from TacGia where TenTacGia ='" + name + "'";
+            DatabaseAccess.getInstance().getConnect();
+            MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+            cmd.CommandText = SQL;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                rs = reader.GetString("MaTacGia");
+            }
+            return rs;
+        }
     }
 }

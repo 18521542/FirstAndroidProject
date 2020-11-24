@@ -41,6 +41,7 @@ namespace DAL
                     float price = (float)Math.Round(float.Parse(reader.GetString("DonGiaNhap")) * 10) / 10;
 
                     Book book = new Book(id, name, authors, category, publishCompany, publishYear, count, price);
+
                     list.Add(book);
                 }
                 DatabaseAccess.getInstance().getClose();
@@ -125,6 +126,35 @@ namespace DAL
                     DatabaseAccess.getInstance().getClose();
                     return false;
                 }
+            }
+            catch (Exception e) { return false; }
+        }
+
+        public bool AddBook(string name, string categoryID, List<string> authorsID, string publishCompany, int publishYear)
+        {
+            string SQL = "call USP_AddBook('" + name + "','" + categoryID + "','" + publishCompany + "','" + publishYear + "')";
+            try
+            {
+                DatabaseAccess.getInstance().getConnect();
+                MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+                cmd.CommandText = SQL;
+                MySqlDataReader reader1 = cmd.ExecuteReader();
+                DatabaseAccess.getInstance().getClose();
+
+                for (int i = 0; i < authorsID.Count(); i++)
+                {
+                    string SQL_AddBookAuthor = "call USP_AddBookAuthor('" + authorsID[i] + "')";
+
+                    DatabaseAccess.getInstance().getConnect();
+
+                    //execute
+                    MySqlCommand cmd2 = DatabaseAccess.getInstance().conn.CreateCommand();                   
+                    cmd2.CommandText = SQL_AddBookAuthor;
+                    MySqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    DatabaseAccess.getInstance().getClose();
+                }
+                return true;
             }
             catch (Exception e) { return false; }
         }

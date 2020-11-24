@@ -46,7 +46,7 @@ namespace DTO
         {
             return category;
         }
-        public String PublishCompany()
+        public string PublishCompany()
         {
             return publishCompany;
         }

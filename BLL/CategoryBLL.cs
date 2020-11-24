@@ -22,5 +22,10 @@ namespace BLL
         {
             return categoryDAL.AddCategory(CategoryName);
         }
+
+        public string GetCategoryIDByName(string name)
+        {
+            return categoryDAL.GetCategoryIDByName(name);
+        }
     }
 }

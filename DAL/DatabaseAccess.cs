@@ -44,6 +44,14 @@ namespace DAL
             conn = new MySqlConnection(connStr);
             conn.Open();
         }
+
+        public void ExecuteQuerry(string querry)
+        {
+            DatabaseAccess.getInstance().getConnect();
+            MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
+            cmd.CommandText = querry;
+            MySqlDataReader reader = cmd.ExecuteReader();
+        }
         
         public void getClose()
         {

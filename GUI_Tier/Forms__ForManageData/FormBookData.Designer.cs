@@ -31,19 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBookData));
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listviewBooks = new System.Windows.Forms.ListView();
             this.STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaSach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TenSach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TheLoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TacGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NhXB = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NXB = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,27 +69,24 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button2_Click);
             // 
-            // listView1
+            // listviewBooks
             // 
-            this.listView1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listviewBooks.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listviewBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.STT,
             this.MaSach,
             this.TenSach,
-            this.TheLoai,
-            this.TacGia,
-            this.NhXB,
-            this.NXB,
             this.SoLuong});
-            this.listView1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 154);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1198, 645);
-            this.listView1.TabIndex = 21;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listviewBooks.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.listviewBooks.FullRowSelect = true;
+            this.listviewBooks.HideSelection = false;
+            this.listviewBooks.Location = new System.Drawing.Point(10, 154);
+            this.listviewBooks.Margin = new System.Windows.Forms.Padding(4);
+            this.listviewBooks.Name = "listviewBooks";
+            this.listviewBooks.Size = new System.Drawing.Size(1198, 645);
+            this.listviewBooks.TabIndex = 21;
+            this.listviewBooks.UseCompatibleStateImageBehavior = false;
+            this.listviewBooks.View = System.Windows.Forms.View.Details;
             // 
             // STT
             // 
@@ -102,43 +97,19 @@
             // 
             this.MaSach.Text = "Mã sách";
             this.MaSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MaSach.Width = 110;
+            this.MaSach.Width = 340;
             // 
             // TenSach
             // 
             this.TenSach.Text = "Tên sách";
             this.TenSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TenSach.Width = 134;
-            // 
-            // TheLoai
-            // 
-            this.TheLoai.Text = "Thể loại";
-            this.TheLoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TheLoai.Width = 97;
-            // 
-            // TacGia
-            // 
-            this.TacGia.Text = "Tác giả";
-            this.TacGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TacGia.Width = 133;
-            // 
-            // NhXB
-            // 
-            this.NhXB.Text = "Nhà xuất bản";
-            this.NhXB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NhXB.Width = 120;
-            // 
-            // NXB
-            // 
-            this.NXB.Text = "Năm xuất bản";
-            this.NXB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NXB.Width = 122;
+            this.TenSach.Width = 434;
             // 
             // SoLuong
             // 
             this.SoLuong.Text = "Còn lại";
             this.SoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SoLuong.Width = 65;
+            this.SoLuong.Width = 369;
             // 
             // button3
             // 
@@ -166,6 +137,14 @@
             this.panel1.Size = new System.Drawing.Size(1199, 152);
             this.panel1.TabIndex = 24;
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(3, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1199, 23);
+            this.label2.TabIndex = 24;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -177,13 +156,25 @@
             this.richTextBox1.TabIndex = 23;
             this.richTextBox1.Text = "";
             // 
-            // label2
+            // button1
             // 
-            this.label2.Location = new System.Drawing.Point(3, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1199, 23);
-            this.label2.TabIndex = 24;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.button1.Location = new System.Drawing.Point(931, 806);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 46);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Detail";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(804, 805);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 46);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Show";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // FormBookData
             // 
@@ -191,7 +182,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1213, 864);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listviewBooks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -208,19 +201,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listviewBooks;
         private System.Windows.Forms.ColumnHeader STT;
         private System.Windows.Forms.ColumnHeader MaSach;
         private System.Windows.Forms.ColumnHeader TenSach;
-        private System.Windows.Forms.ColumnHeader TheLoai;
-        private System.Windows.Forms.ColumnHeader TacGia;
-        private System.Windows.Forms.ColumnHeader NhXB;
-        private System.Windows.Forms.ColumnHeader NXB;
         private System.Windows.Forms.ColumnHeader SoLuong;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         //private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
     }
 }

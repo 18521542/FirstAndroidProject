@@ -25,5 +25,9 @@ namespace BLL
             return authorDAL.AddAuthor(AuthorName);
         }
 
+        public string GetAuthorIDByName(string name)
+        {
+            return authorDAL.GetAuthorIDByName(name);
+        }
     }
 }
