@@ -86,6 +86,12 @@
     <Compile Include="FormsForManageData\BookInformation.Designer.cs">
       <DependentUpon>BookInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsForManageData\CTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsForManageData\CTHD.Designer.cs">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsForManageData\FormBookData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsForManageData\BookInformation.resx">
       <DependentUpon>BookInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsForManageData\CTHD.resx">
+      <DependentUpon>CTHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsForManageData\FormBookData.resx">
       <DependentUpon>FormBookData.cs</DependentUpon>
