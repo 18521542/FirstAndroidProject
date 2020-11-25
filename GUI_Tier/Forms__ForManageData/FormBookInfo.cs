@@ -131,7 +131,7 @@ namespace GUI_Tier.Forms__ForManageData
                         MessageBox.Show("Update that bai");
                 }
             }
-            catch (Exception ex)
+            catch 
             {
                 MessageBox.Show("Thong tin khong hop le");
             }

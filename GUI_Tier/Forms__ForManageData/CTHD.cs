@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI_Tier
 {
-    public partial class FormCustomerData : Form
+    public partial class CTHD : Form
     {
-        public FormCustomerData()
+        public CTHD()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnOut_Click(object sender, EventArgs e)
         {
-            CTHD form = new CTHD();
-            form.Show();
+            this.Dispose();
         }
     }
 }

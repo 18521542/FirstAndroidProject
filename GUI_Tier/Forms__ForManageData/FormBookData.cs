@@ -78,5 +78,10 @@ namespace GUI_Tier
                 stt++;
             }
         }
+
+        private void FormBookData_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

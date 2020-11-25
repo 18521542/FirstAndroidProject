@@ -51,6 +51,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms__ForManageData\CTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms__ForManageData\CTHD.Designer.cs">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms__ForManageData\AddBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </Compile>
     <Compile Include="MainAppForms\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms__ForManageData\CTHD.resx">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms__ForManageData\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
     </EmbeddedResource>
