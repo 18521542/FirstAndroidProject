@@ -67,7 +67,6 @@ namespace GUI_Tier
 
         private void ShowListBooks()
         {
-            
             int stt = 0;
             foreach (Book book in bookController.GetBooks())
             {
@@ -80,6 +79,11 @@ namespace GUI_Tier
         }
 
         private void FormBookData_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listviewBooks_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

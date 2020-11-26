@@ -101,6 +101,8 @@ namespace DAL
         {
             string rs = "";
             string SQL = "Select MaTheLoai from THELOAISACH where TENTHELOAI ='" + name + "'";
+
+            
             DatabaseAccess.getInstance().getConnect();
             MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
             cmd.CommandText = SQL;
