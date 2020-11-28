@@ -135,15 +135,20 @@ namespace GUI_Tier.FormsForSelling_Function
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            DateTime date = DateTime.Parse(textboxDay.Text);
-            float total = float.Parse(textboxTotal.Text);
-            if (ImportBookCardController.AddImportBookCard(date, total, listviewBookChosen))
+            try
             {
-                MessageBox.Show("Nhập sách thành công");
+                DateTime date = DateTime.Parse(textboxDay.Text);
+                float total = float.Parse(textboxTotal.Text);
+                if (ImportBookCardController.AddImportBookCard(date, total, listviewBookChosen))
+                {
+                    MessageBox.Show("Nhập sách thành công");
+                }
 
             }
-            else
-                MessageBox.Show("Nhập sách thất bại");
+            catch(Exception ex)
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin");
+            }      
         }
     }
 }

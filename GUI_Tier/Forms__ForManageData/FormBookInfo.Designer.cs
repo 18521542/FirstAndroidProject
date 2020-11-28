@@ -34,6 +34,8 @@ namespace GUI_Tier.Forms__ForManageData
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.listTacGia = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelID = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.cbbAuthors = new System.Windows.Forms.ComboBox();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
@@ -47,7 +49,7 @@ namespace GUI_Tier.Forms__ForManageData
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listviewImportBookCards = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,8 +57,6 @@ namespace GUI_Tier.Forms__ForManageData
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
-            this.labelID = new System.Windows.Forms.Label();
-            this.listTacGia = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -131,6 +131,26 @@ namespace GUI_Tier.Forms__ForManageData
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(532, 659);
             this.panel3.TabIndex = 2;
+            // 
+            // listTacGia
+            // 
+            this.listTacGia.BackColor = System.Drawing.Color.Khaki;
+            this.listTacGia.Location = new System.Drawing.Point(32, 316);
+            this.listTacGia.Name = "listTacGia";
+            this.listTacGia.Size = new System.Drawing.Size(441, 145);
+            this.listTacGia.TabIndex = 15;
+            // 
+            // labelID
+            // 
+            this.labelID.BackColor = System.Drawing.Color.DarkRed;
+            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelID.Location = new System.Drawing.Point(157, 68);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(316, 23);
+            this.labelID.TabIndex = 14;
+            this.labelID.Text = "1";
+            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUpdate
             // 
@@ -261,35 +281,35 @@ namespace GUI_Tier.Forms__ForManageData
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Khaki;
-            this.panel4.Controls.Add(this.listView1);
+            this.panel4.Controls.Add(this.listviewImportBookCards);
             this.panel4.Location = new System.Drawing.Point(587, 123);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(564, 659);
             this.panel4.TabIndex = 3;
             // 
-            // listView1
+            // listviewImportBookCards
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listviewImportBookCards.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(4, 49);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(555, 447);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listviewImportBookCards.HideSelection = false;
+            this.listviewImportBookCards.Location = new System.Drawing.Point(4, 49);
+            this.listviewImportBookCards.Margin = new System.Windows.Forms.Padding(4);
+            this.listviewImportBookCards.Name = "listviewImportBookCards";
+            this.listviewImportBookCards.Size = new System.Drawing.Size(555, 447);
+            this.listviewImportBookCards.TabIndex = 0;
+            this.listviewImportBookCards.UseCompatibleStateImageBehavior = false;
+            this.listviewImportBookCards.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 56;
+            this.columnHeader1.Width = 44;
             // 
             // columnHeader2
             // 
@@ -336,26 +356,6 @@ namespace GUI_Tier.Forms__ForManageData
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // labelID
-            // 
-            this.labelID.BackColor = System.Drawing.Color.DarkRed;
-            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelID.Location = new System.Drawing.Point(157, 68);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(316, 23);
-            this.labelID.TabIndex = 14;
-            this.labelID.Text = "1";
-            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listTacGia
-            // 
-            this.listTacGia.BackColor = System.Drawing.Color.Khaki;
-            this.listTacGia.Location = new System.Drawing.Point(32, 316);
-            this.listTacGia.Name = "listTacGia";
-            this.listTacGia.Size = new System.Drawing.Size(441, 145);
-            this.listTacGia.TabIndex = 15;
-            // 
             // FormBookInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,7 +401,7 @@ namespace GUI_Tier.Forms__ForManageData
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbAuthors;
         private System.Windows.Forms.ComboBox cbbCategory;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listviewImportBookCards;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

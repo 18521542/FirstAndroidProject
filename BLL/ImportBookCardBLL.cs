@@ -5,16 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
+using DTO;
 
 namespace BLL
 {
     public class ImportBookCardBLL
     {
         private ImportBookCardDAL importBookCardDAL = null;
+
         public ImportBookCardBLL()
         {
             importBookCardDAL = new ImportBookCardDAL();
         }
+
         public bool AddImportBookCard(DateTime date, float value, ListView ListBookImport)
         {
             if (importBookCardDAL.AddImportBookCard(date, value))
@@ -38,6 +41,11 @@ namespace BLL
                 }
             }
             return false;
+        }
+
+        public List<ImportBookCard> GetImportBookCardsByBookID(string bookID)
+        {
+            return this.importBookCardDAL.GetImportBookCardByBookID(bookID);
         }
     }
 }

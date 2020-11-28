@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
             this.labelHeader = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listviewBook = new System.Windows.Forms.ListView();
@@ -43,35 +42,25 @@
             this.year = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.month = new System.Windows.Forms.NumericUpDown();
-            this.panelHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.month)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panelHeader.Controls.Add(this.labelHeader);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1228, 128);
-            this.panelHeader.TabIndex = 0;
-            // 
             // labelHeader
             // 
-            this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelHeader.BackColor = System.Drawing.Color.Purple;
+            this.labelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelHeader.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold);
             this.labelHeader.ForeColor = System.Drawing.Color.White;
-            this.labelHeader.Location = new System.Drawing.Point(389, 38);
+            this.labelHeader.Location = new System.Drawing.Point(0, 0);
             this.labelHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(449, 55);
+            this.labelHeader.Size = new System.Drawing.Size(1228, 67);
             this.labelHeader.TabIndex = 0;
             this.labelHeader.Text = "Báo cáo doanh thu";
+            this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -80,10 +69,10 @@
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.panelBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 128);
+            this.panel2.Location = new System.Drawing.Point(0, 71);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1228, 869);
+            this.panel2.Size = new System.Drawing.Size(1228, 926);
             this.panel2.TabIndex = 1;
             // 
             // listviewBook
@@ -208,14 +197,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 997);
+            this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormRevenueReport";
             this.Text = "FormRevenueReport";
-            this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panelBtn.ResumeLayout(false);
             this.panelBtn.PerformLayout();
@@ -226,8 +213,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label labelHeader;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelBtn;

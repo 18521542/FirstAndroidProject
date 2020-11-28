@@ -263,7 +263,7 @@
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label7.BackColor = System.Drawing.Color.Purple;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -25,13 +25,16 @@ namespace GUI_Tier.Forms__ForManageData
 
         //allow only 1 form to show
         public bool isShown = false;
+
         private bool ComboboxIsLoaded = false;
 
         private BookBLL BookController = null;
         private AuthorBLL AuthorController = null;
         private CategoryBLL CategoryController = null;
+        private ImportBookCardBLL ImportBookCarllController = null;
 
         private Book book = null;
+        private List<ImportBookCard> HistoryImport = null;
         
         public FormBookInfo()
         {
@@ -39,6 +42,7 @@ namespace GUI_Tier.Forms__ForManageData
             BookController = new BookBLL();
             AuthorController = new AuthorBLL();
             CategoryController = new CategoryBLL();
+            ImportBookCarllController = new ImportBookCardBLL();
         }
 
         public void LoadForm(string _id)
@@ -51,6 +55,7 @@ namespace GUI_Tier.Forms__ForManageData
             }
             LoadBookData();
         }
+
         public void LoadBookData()
         {
             this.labelID.Text = book.Id();
@@ -66,6 +71,9 @@ namespace GUI_Tier.Forms__ForManageData
             {
                 CreateButton(author.Name());
             }
+
+            //Load history import 
+            this.LoadImportBookCards();
         }
 
         private void RemoveFromListButton(object sender, EventArgs e)
@@ -131,7 +139,7 @@ namespace GUI_Tier.Forms__ForManageData
                         MessageBox.Show("Update that bai");
                 }
             }
-            catch 
+            catch (Exception ex)
             {
                 MessageBox.Show("Thong tin khong hop le");
             }
@@ -178,6 +186,23 @@ namespace GUI_Tier.Forms__ForManageData
             listTacGia.Controls.Clear();
             cbbCategory.SelectedItem = null;
             cbbAuthors.SelectedItem = null;
+        }
+
+        private void LoadImportBookCards()
+        {
+            this.HistoryImport = ImportBookCarllController.GetImportBookCardsByBookID(book.Id());
+            this.listviewImportBookCards.Items.Clear();
+            int stt = 0;
+            foreach(ImportBookCard row in HistoryImport)
+            {
+                this.listviewImportBookCards.Items.Add(stt.ToString());
+                this.listviewImportBookCards.Items[stt].SubItems.Add(row.Id());
+                this.listviewImportBookCards.Items[stt].SubItems.Add(row.Date().ToString("dd/MM/yyyy"));
+                this.listviewImportBookCards.Items[stt].SubItems.Add(row.Count().ToString());
+                this.listviewImportBookCards.Items[stt].SubItems.Add(row.Price().ToString());
+                this.listviewImportBookCards.Items[stt].SubItems.Add(row.Total().ToString());
+                stt++;
+            }
         }
     }
 }
