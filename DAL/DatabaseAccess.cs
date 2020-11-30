@@ -16,6 +16,7 @@ namespace DAL
         private string passWord = "";
         private string port = "3306";
         public MySqlConnection conn = null;
+        public MySqlDataReader reader = null;
 
         //single-ton design
         private static DatabaseAccess instance = null;
@@ -49,7 +50,7 @@ namespace DAL
         {
             MySqlCommand cmd = DatabaseAccess.getInstance().conn.CreateCommand();
             cmd.CommandText = querry;
-            MySqlDataReader reader = cmd.ExecuteReader();
+            this.reader = cmd.ExecuteReader();
         }
         
         public void getClose()

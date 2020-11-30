@@ -72,7 +72,6 @@
             this.listviewBooks.UseCompatibleStateImageBehavior = false;
             this.listviewBooks.View = System.Windows.Forms.View.Details;
             this.listviewBooks.ItemActivate += new System.EventHandler(this.myListView_ItemClick);
-            this.listviewBooks.SelectedIndexChanged += new System.EventHandler(this.listviewBooks_SelectedIndexChanged);
             // 
             // STT
             // 
@@ -162,7 +161,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormBookData";
             this.Text = "FormBookData";
-            this.Load += new System.EventHandler(this.FormBookData_Load);
             this.ResumeLayout(false);
 
         }

@@ -54,6 +54,7 @@
     <Compile Include="AuthorDAL.cs" />
     <Compile Include="BookDAL.cs" />
     <Compile Include="CategoryDAL.cs" />
+    <Compile Include="CustomerDAL.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="ImportBookCardDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -51,6 +51,7 @@
     <Compile Include="AuthorBLL.cs" />
     <Compile Include="BookBLL.cs" />
     <Compile Include="CategoryBLL.cs" />
+    <Compile Include="CustomerBLL.cs" />
     <Compile Include="ImportBookCardBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

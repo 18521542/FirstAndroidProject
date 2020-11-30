@@ -16,6 +16,7 @@ namespace GUI_Tier.Forms__ForManageData
     {
         //single-ton design
         private static FormBookInfo instance = null;
+
         public static FormBookInfo getInstance()
         {
             if (instance == null)

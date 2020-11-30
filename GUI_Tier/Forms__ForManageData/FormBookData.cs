@@ -78,14 +78,5 @@ namespace GUI_Tier
             }
         }
 
-        private void FormBookData_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listviewBooks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
