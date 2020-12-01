@@ -88,5 +88,23 @@ namespace DAL
                 return false; 
             }
         }
+
+        public string GetCustomerIDByName(string name)
+        {
+            string SQL = "Select * from KHACHHANG where TenKhachHang = '" + name +"'";
+            string rs = "";
+            try
+            {
+                DatabaseAccess.getInstance().getConnect();
+                DatabaseAccess.getInstance().ExecuteQuerry(SQL);
+                while (DatabaseAccess.getInstance().reader.Read())
+                {
+                    rs = DatabaseAccess.getInstance().reader.GetString("MaKhachHang");
+                }
+                DatabaseAccess.getInstance().getClose();
+            }
+            catch (Exception e) { }
+            return rs;
+        }
     }
 }

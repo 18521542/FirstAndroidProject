@@ -123,14 +123,17 @@
             this.columnHeader6,
             this.columnHeader15});
             this.listviewBookChosen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.listviewBookChosen.FullRowSelect = true;
             this.listviewBookChosen.HideSelection = false;
             this.listviewBookChosen.Location = new System.Drawing.Point(0, 0);
             this.listviewBookChosen.Margin = new System.Windows.Forms.Padding(4);
+            this.listviewBookChosen.MultiSelect = false;
             this.listviewBookChosen.Name = "listviewBookChosen";
             this.listviewBookChosen.Size = new System.Drawing.Size(670, 271);
             this.listviewBookChosen.TabIndex = 3;
             this.listviewBookChosen.UseCompatibleStateImageBehavior = false;
             this.listviewBookChosen.View = System.Windows.Forms.View.Details;
+            this.listviewBookChosen.ItemActivate += new System.EventHandler(this.ListViewBookReceive_ItemClick);
             // 
             // columnHeader1
             // 

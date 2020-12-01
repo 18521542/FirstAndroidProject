@@ -98,6 +98,7 @@ namespace GUI_Tier.FormsForSelling_Function
             }
             CountValueOfTotalBooks();
         }
+
         private void CountValueOfBook()
         {
             textboxValue.Text = (numericCount.Value * numericPrice.Value).ToString();
@@ -149,6 +150,18 @@ namespace GUI_Tier.FormsForSelling_Function
             {
                 MessageBox.Show("Vui lòng kiểm tra lại thông tin");
             }      
+        }
+
+        private void ListViewBookReceive_ItemClick(object sender, EventArgs e)
+        {
+            string id = this.listviewBookChosen.SelectedItems[0].SubItems[1].Text;
+            Book bookselected = BookController.GetBookByID(id);
+
+            if (MessageBox.Show("Bạn muốn xóa quyển sách này ra khỏi hóa đơn?", "Yes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                listviewBookChosen.Items.Remove(listviewBookChosen.SelectedItems[0]);
+                CountValueOfTotalBooks();
+            }
         }
     }
 }

@@ -36,5 +36,10 @@ namespace BLL
         {
             return this.customerDAL.UpdateCustomer(id, name, phone, email, address);
         }
+
+        public string GetCustomerIDByName(string name)
+        {
+            return this.customerDAL.GetCustomerIDByName(name);
+        }
     }
 }

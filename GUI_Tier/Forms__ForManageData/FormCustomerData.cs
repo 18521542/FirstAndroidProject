@@ -81,10 +81,9 @@ namespace GUI_Tier
                 bool PhoneNull = string.IsNullOrEmpty(textboxPhone.Text);
                 bool AddressNull = string.IsNullOrEmpty(textboxAddress.Text);
 
-                string name = listviewCustomer.SelectedItems[0].SubItems[2].Text;
-
                 if (!NameNull && !EmailNull && !PhoneNull && !AddressNull)
                 {
+                    string name = textboxName.Text;
                     string phone = textboxPhone.Text;
                     string email = textboxEmail.Text;
                     string address = textboxAddress.Text;

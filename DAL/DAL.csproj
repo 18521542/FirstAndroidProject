@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AccountDAL.cs" />
     <Compile Include="AuthorDAL.cs" />
+    <Compile Include="BillDAL.cs" />
     <Compile Include="BookDAL.cs" />
     <Compile Include="CategoryDAL.cs" />
     <Compile Include="CustomerDAL.cs" />
