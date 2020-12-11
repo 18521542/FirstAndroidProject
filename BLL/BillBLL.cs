@@ -42,5 +42,25 @@ namespace BLL
             }
             return false;
         }
+
+        public List<Bill> GetBillsByCusID(string cusID)
+        {
+            List<Bill> listBills = null;
+            listBills = BillDAL.GetBillsByCustomerID(cusID);
+            for (int i = 0; i < listBills.Count(); i++)
+            {
+                for (int j = i + 1; j < listBills.Count(); j++)
+                {
+                    if (listBills[i].Id().Equals(listBills[j].Id()))
+                        listBills.Remove(listBills[j]);
+                }
+            }
+            return listBills;
+        }
+
+        public List<Bill> GetBillDetailsByBillID(string billID)
+        {
+            return this.BillDAL.GetBillDetailsByBillID(billID);
+        }
     }
 }

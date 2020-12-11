@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUI));
             this.timerForManageDataMenu = new System.Windows.Forms.Timer(this.components);
             this.timerForSellMenu = new System.Windows.Forms.Timer(this.components);
             this.timerForEmployeeAndRuleMenu = new System.Windows.Forms.Timer(this.components);
@@ -64,7 +65,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +72,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -412,22 +411,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.lbAddress);
-            this.panel4.Controls.Add(this.lbEmail);
-            this.panel4.Controls.Add(this.lblPhone);
-            this.panel4.Controls.Add(this.lbRealname);
-            this.panel4.Controls.Add(this.lbType);
-            this.panel4.Controls.Add(this.lbPassword);
-            this.panel4.Controls.Add(this.lbUsername);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(306, 324);
@@ -445,8 +429,8 @@
             // lbAddress
             // 
             this.lbAddress.AutoSize = true;
-            this.lbAddress.ForeColor = System.Drawing.Color.Purple;
-            this.lbAddress.Location = new System.Drawing.Point(147, 267);
+            this.lbAddress.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbAddress.Location = new System.Drawing.Point(637, 418);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(73, 17);
             this.lbAddress.TabIndex = 15;
@@ -455,8 +439,8 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.ForeColor = System.Drawing.Color.Purple;
-            this.lbEmail.Location = new System.Drawing.Point(147, 235);
+            this.lbEmail.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbEmail.Location = new System.Drawing.Point(637, 386);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(73, 17);
             this.lbEmail.TabIndex = 14;
@@ -465,8 +449,8 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.ForeColor = System.Drawing.Color.Purple;
-            this.lblPhone.Location = new System.Drawing.Point(147, 201);
+            this.lblPhone.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lblPhone.Location = new System.Drawing.Point(637, 352);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(73, 17);
             this.lblPhone.TabIndex = 13;
@@ -475,8 +459,8 @@
             // lbRealname
             // 
             this.lbRealname.AutoSize = true;
-            this.lbRealname.ForeColor = System.Drawing.Color.Purple;
-            this.lbRealname.Location = new System.Drawing.Point(147, 172);
+            this.lbRealname.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbRealname.Location = new System.Drawing.Point(637, 323);
             this.lbRealname.Name = "lbRealname";
             this.lbRealname.Size = new System.Drawing.Size(73, 17);
             this.lbRealname.TabIndex = 12;
@@ -485,8 +469,8 @@
             // lbType
             // 
             this.lbType.AutoSize = true;
-            this.lbType.ForeColor = System.Drawing.Color.Purple;
-            this.lbType.Location = new System.Drawing.Point(147, 142);
+            this.lbType.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbType.Location = new System.Drawing.Point(637, 293);
             this.lbType.Name = "lbType";
             this.lbType.Size = new System.Drawing.Size(73, 17);
             this.lbType.TabIndex = 11;
@@ -495,8 +479,8 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.ForeColor = System.Drawing.Color.Purple;
-            this.lbPassword.Location = new System.Drawing.Point(147, 115);
+            this.lbPassword.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbPassword.Location = new System.Drawing.Point(637, 266);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(73, 17);
             this.lbPassword.TabIndex = 10;
@@ -505,8 +489,8 @@
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.ForeColor = System.Drawing.Color.Purple;
-            this.lbUsername.Location = new System.Drawing.Point(147, 87);
+            this.lbUsername.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbUsername.Location = new System.Drawing.Point(637, 238);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(73, 17);
             this.lbUsername.TabIndex = 9;
@@ -515,8 +499,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Purple;
-            this.label9.Location = new System.Drawing.Point(81, 267);
+            this.label9.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label9.Location = new System.Drawing.Point(571, 418);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 17);
             this.label9.TabIndex = 8;
@@ -525,8 +509,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Purple;
-            this.label8.Location = new System.Drawing.Point(99, 235);
+            this.label8.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label8.Location = new System.Drawing.Point(589, 386);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 7;
@@ -535,40 +519,28 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Purple;
-            this.label7.Location = new System.Drawing.Point(101, 142);
+            this.label7.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label7.Location = new System.Drawing.Point(591, 293);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Type:";
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Purple;
-            this.label6.Location = new System.Drawing.Point(38, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 29);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "PERSONAL INFO";
-            // 
             // label5
             // 
+            this.label5.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label5.ForeColor = System.Drawing.Color.Purple;
-            this.label5.Location = new System.Drawing.Point(3, 61);
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.Location = new System.Drawing.Point(0, -3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(303, 23);
+            this.label5.Size = new System.Drawing.Size(310, 330);
             this.label5.TabIndex = 4;
-            this.label5.Text = "---------------------------------------------------------------------------------" +
-    "---------------";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Purple;
-            this.label4.Location = new System.Drawing.Point(92, 201);
+            this.label4.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label4.Location = new System.Drawing.Point(582, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 3;
@@ -578,8 +550,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(69, 172);
+            this.label3.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label3.Location = new System.Drawing.Point(559, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 2;
@@ -588,8 +560,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Purple;
-            this.label2.Location = new System.Drawing.Point(72, 115);
+            this.label2.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label2.Location = new System.Drawing.Point(562, 266);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 1;
@@ -598,8 +570,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(68, 87);
+            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label1.Location = new System.Drawing.Point(558, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
@@ -624,30 +596,33 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panelChildForm.Controls.Add(this.label11);
-            this.panelChildForm.Location = new System.Drawing.Point(315, 3);
+            this.panelChildForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelChildForm.Controls.Add(this.lbUsername);
+            this.panelChildForm.Controls.Add(this.lbAddress);
+            this.panelChildForm.Controls.Add(this.label1);
+            this.panelChildForm.Controls.Add(this.lbEmail);
+            this.panelChildForm.Controls.Add(this.label2);
+            this.panelChildForm.Controls.Add(this.lblPhone);
+            this.panelChildForm.Controls.Add(this.label3);
+            this.panelChildForm.Controls.Add(this.lbRealname);
+            this.panelChildForm.Controls.Add(this.label4);
+            this.panelChildForm.Controls.Add(this.lbType);
+            this.panelChildForm.Controls.Add(this.label7);
+            this.panelChildForm.Controls.Add(this.lbPassword);
+            this.panelChildForm.Controls.Add(this.label8);
+            this.panelChildForm.Controls.Add(this.label9);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelChildForm.Location = new System.Drawing.Point(313, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1282, 997);
+            this.panelChildForm.Size = new System.Drawing.Size(1287, 997);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(567, 87);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(243, 72);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Quản lý nhà sách";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1600, 1000);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.MenuPanel);
@@ -660,9 +635,9 @@
             this.panel1.ResumeLayout(false);
             this.panelManageData.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.MenuPanel.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -708,9 +683,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
     }
 }

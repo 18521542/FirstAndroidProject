@@ -226,6 +226,8 @@
     <Content Include="Resources\books_100px.png" />
     <None Include="Resources\Collapse Arrow_20px.png" />
     <None Include="Resources\Expand Arrow_20px.png" />
+    <Content Include="Resources\icons8-repeat-32.png" />
+    <Content Include="Resources\icons8-search-32.png" />
     <Content Include="Resources\Main_Background.jpg" />
     <Content Include="Resources\password_24px.png" />
     <Content Include="Resources\Pic.jpg" />

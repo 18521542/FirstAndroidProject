@@ -136,6 +136,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Tra cứu";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panelBtn
             // 
@@ -166,6 +167,11 @@
             // 
             this.year.Location = new System.Drawing.Point(292, 22);
             this.year.Margin = new System.Windows.Forms.Padding(4);
+            this.year.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.year.Name = "year";
             this.year.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.year.Size = new System.Drawing.Size(96, 22);
@@ -187,6 +193,11 @@
             // 
             this.month.Location = new System.Drawing.Point(108, 22);
             this.month.Margin = new System.Windows.Forms.Padding(4);
+            this.month.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.month.Name = "month";
             this.month.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.month.Size = new System.Drawing.Size(66, 22);

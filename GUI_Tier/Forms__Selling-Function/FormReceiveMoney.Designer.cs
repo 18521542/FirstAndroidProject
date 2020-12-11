@@ -29,24 +29,27 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ksdk = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.RichTextBox();
+            this.moneyRest = new System.Windows.Forms.RichTextBox();
+            this.name = new System.Windows.Forms.RichTextBox();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel2.SuspendLayout();
+            this.moneyReceive = new System.Windows.Forms.NumericUpDown();
+            this.moneyOwe = new System.Windows.Forms.NumericUpDown();
+            this.ksdk.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyReceive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyOwe)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,66 +66,100 @@
             this.label1.Text = "Phiếu thu tiền";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // ksdk
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(814, 79);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 701);
-            this.panel2.TabIndex = 1;
+            this.ksdk.BackColor = System.Drawing.Color.Purple;
+            this.ksdk.Controls.Add(this.moneyOwe);
+            this.ksdk.Controls.Add(this.moneyReceive);
+            this.ksdk.Controls.Add(this.label7);
+            this.ksdk.Controls.Add(this.date);
+            this.ksdk.Controls.Add(this.moneyRest);
+            this.ksdk.Controls.Add(this.name);
+            this.ksdk.Controls.Add(this.btnPay);
+            this.ksdk.Controls.Add(this.btnRefresh);
+            this.ksdk.Controls.Add(this.label6);
+            this.ksdk.Controls.Add(this.label5);
+            this.ksdk.Controls.Add(this.label4);
+            this.ksdk.Controls.Add(this.label3);
+            this.ksdk.Controls.Add(this.label2);
+            this.ksdk.Location = new System.Drawing.Point(814, 79);
+            this.ksdk.Margin = new System.Windows.Forms.Padding(4);
+            this.ksdk.Name = "ksdk";
+            this.ksdk.Size = new System.Drawing.Size(409, 754);
+            this.ksdk.TabIndex = 1;
             // 
-            // button2
+            // label7
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(20, 641);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(373, 56);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Thanh toán";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(-7, 556);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(416, 10);
+            this.label7.TabIndex = 17;
             // 
-            // button1
+            // date
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(20, 543);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(373, 59);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = false;
+            this.date.Cursor = System.Windows.Forms.Cursors.No;
+            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.date.Location = new System.Drawing.Point(20, 478);
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Size = new System.Drawing.Size(373, 35);
+            this.date.TabIndex = 16;
+            this.date.Text = "";
             // 
-            // textBox5
+            // moneyRest
             // 
-            this.textBox5.Location = new System.Drawing.Point(20, 479);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(373, 22);
-            this.textBox5.TabIndex = 9;
+            this.moneyRest.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.moneyRest.Location = new System.Drawing.Point(20, 374);
+            this.moneyRest.Name = "moneyRest";
+            this.moneyRest.ReadOnly = true;
+            this.moneyRest.Size = new System.Drawing.Size(373, 35);
+            this.moneyRest.TabIndex = 15;
+            this.moneyRest.Text = "";
+            // 
+            // name
+            // 
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(20, 73);
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Size = new System.Drawing.Size(373, 35);
+            this.name.TabIndex = 12;
+            this.name.Text = "";
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.White;
+            this.btnPay.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnPay.ForeColor = System.Drawing.Color.Black;
+            this.btnPay.Location = new System.Drawing.Point(20, 677);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(373, 56);
+            this.btnPay.TabIndex = 11;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.White;
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.btnRefresh.Location = new System.Drawing.Point(20, 594);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(373, 59);
+            this.btnRefresh.TabIndex = 10;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.Color.Purple;
+            this.label6.ForeColor = System.Drawing.Color.GhostWhite;
             this.label6.Location = new System.Drawing.Point(15, 446);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -130,19 +167,11 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Ngày lập";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(20, 375);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(373, 22);
-            this.textBox4.TabIndex = 7;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.Purple;
+            this.label5.ForeColor = System.Drawing.Color.GhostWhite;
             this.label5.Location = new System.Drawing.Point(15, 342);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -150,19 +179,11 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Còn lại";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(20, 277);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(373, 22);
-            this.textBox3.TabIndex = 5;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.Color.Purple;
+            this.label4.ForeColor = System.Drawing.Color.GhostWhite;
             this.label4.Location = new System.Drawing.Point(15, 244);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -170,19 +191,11 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Nhập số tiền thu";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(20, 171);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(373, 22);
-            this.textBox2.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Purple;
+            this.label3.ForeColor = System.Drawing.Color.GhostWhite;
             this.label3.Location = new System.Drawing.Point(15, 138);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -190,19 +203,11 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Tiền nợ";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(20, 73);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(373, 22);
-            this.textBox1.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.Purple;
+            this.label2.ForeColor = System.Drawing.Color.GhostWhite;
             this.label2.Location = new System.Drawing.Point(15, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -217,14 +222,16 @@
             this.columnHeader2,
             this.columnHeader3});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(1, 79);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(805, 701);
+            this.listView1.Size = new System.Drawing.Size(805, 754);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ItemActivate += new System.EventHandler(this.ListViewBookReceive_ItemClick);
             // 
             // columnHeader1
             // 
@@ -243,43 +250,78 @@
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 300;
             // 
+            // moneyReceive
+            // 
+            this.moneyReceive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.moneyReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyReceive.Location = new System.Drawing.Point(20, 277);
+            this.moneyReceive.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.moneyReceive.Name = "moneyReceive";
+            this.moneyReceive.Size = new System.Drawing.Size(373, 34);
+            this.moneyReceive.TabIndex = 18;
+            this.moneyReceive.ValueChanged += new System.EventHandler(this.moneyReceive_ValueChanged);
+            // 
+            // moneyOwe
+            // 
+            this.moneyOwe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.moneyOwe.Enabled = false;
+            this.moneyOwe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyOwe.Location = new System.Drawing.Point(20, 170);
+            this.moneyOwe.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.moneyOwe.Name = "moneyOwe";
+            this.moneyOwe.Size = new System.Drawing.Size(373, 34);
+            this.moneyOwe.TabIndex = 19;
+            // 
             // FormReceiveMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1228, 846);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.ksdk);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormReceiveMoney";
             this.Text = "FormReceiveMoney";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.ksdk.ResumeLayout(false);
+            this.ksdk.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyReceive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyOwe)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel ksdk;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox date;
+        private System.Windows.Forms.RichTextBox moneyRest;
+        private System.Windows.Forms.RichTextBox name;
+        private System.Windows.Forms.NumericUpDown moneyReceive;
+        private System.Windows.Forms.NumericUpDown moneyOwe;
     }
 }

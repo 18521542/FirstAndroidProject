@@ -16,17 +16,26 @@ namespace GUI_Tier
     {
         private CustomerBLL CustomerController = null;
 
+        private BillBLL BillController = null;
+
         private List<Customer> customers = null;
 
+        private List<Bill> bills = null;
+
         private Customer cuschosen = null;
+
+        private List<Bill> billDetails = null;
 
         public FormCustomerData()
         {
             InitializeComponent();
+            BillController = new BillBLL();
             CustomerController = new CustomerBLL();
             customers = new List<Customer>();
+            bills = new List<Bill>();
             this.customers = CustomerController.GetCustomers();
             this.cuschosen = new Customer();
+            this.billDetails = new List<Bill>();
             ClearAndReload();
         }
 
@@ -50,16 +59,30 @@ namespace GUI_Tier
 
         private void myListView_ItemClick(object sender, EventArgs e)
         {
+            //id of customer who are clicked in table
             string id = this.listviewCustomer.SelectedItems[0].SubItems[1].Text;
             cuschosen = CustomerController.GetCustomerByID(id);
 
             LoadCustomerInfoByID(id);
+
             LoadBillByCusTomerID(id);
+
+            listviewHistoryBuy.Items.Clear();
+            LoadListBillInfoToTable();
+        }
+
+        private void myListViewHistory_ItemClick(object sender, EventArgs e)
+        {
+            //id of customer who are clicked in table
+            string id = this.listviewHistoryBuy.SelectedItems[0].SubItems[1].Text;
+            billDetails = BillController.GetBillDetailsByBillID(id);
+            CTHD.getInstance().SetBillDetails(billDetails);
+            CTHD.getInstance().LoadInfo();
+            CTHD.getInstance().Show();
         }
 
         private void LoadCustomerInfoByID(string id)
         {
-
             textboxName.Text = cuschosen.Name();
             textboxAddress.Text = cuschosen.Address();
             textboxEmail.Text = cuschosen.Email();
@@ -69,7 +92,20 @@ namespace GUI_Tier
 
         private void LoadBillByCusTomerID(string id)
         {
+            this.bills = BillController.GetBillsByCusID(id);
+        }
 
+        private void LoadListBillInfoToTable()
+        {
+            int stt = 0;
+            foreach (Bill bill in bills)
+            {
+                listviewHistoryBuy.Items.Add(stt.ToString());
+                listviewHistoryBuy.Items[stt].SubItems.Add(bill.Id());
+                listviewHistoryBuy.Items[stt].SubItems.Add(bill.Date().ToString("dd/MM/yyyy"));
+                listviewHistoryBuy.Items[stt].SubItems.Add(bill.Value().ToString());
+                stt++;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -101,7 +137,6 @@ namespace GUI_Tier
                 MessageBox.Show("Thong tin khong hop le");
             }
         }
-
 
         private void ClearAndReload()
         {

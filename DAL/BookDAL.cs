@@ -55,7 +55,7 @@ namespace DAL
 
         public Book getBookByID(string bookID)
         {
-            String SQL = "call USP_GetBookByID('" + bookID + "')";
+            string SQL = "call USP_GetBookByID('" + bookID + "')";
             Book book = null;
             try
             {

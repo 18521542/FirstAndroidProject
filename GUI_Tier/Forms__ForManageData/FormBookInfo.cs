@@ -48,6 +48,7 @@ namespace GUI_Tier.Forms__ForManageData
 
         public void LoadForm(string _id)
         {
+            Clear();
             book = BookController.GetBookByID(_id);
             if (!ComboboxIsLoaded)
             {
@@ -134,6 +135,7 @@ namespace GUI_Tier.Forms__ForManageData
                     if (BookController.UpdateBook(id,name, categoryID, authorsID, company, year))
                     {
                         MessageBox.Show("Update thanh cong");
+                        this.Hide();
                         Clear();
                     }
                     else

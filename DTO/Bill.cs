@@ -15,6 +15,7 @@ namespace DTO
         private float moneyReceive;
         private float moneyChange;
         private string bookID;
+
         private int count;
         private float price;
         private float moneyBook;

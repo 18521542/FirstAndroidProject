@@ -29,10 +29,6 @@ namespace GUI_Tier
                 Forms__ForManageData.FormBookInfo.getInstance().LoadForm(id);
             }
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -40,8 +36,6 @@ namespace GUI_Tier
             bookInfo.SetDesktopLocation(0, 0);
             bookInfo.Show();
         }
-
-
 
         private void button3_Click(object sender, EventArgs e)
         {

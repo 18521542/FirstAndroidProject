@@ -30,7 +30,7 @@
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnOut = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listviewBooksBuy = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,6 +49,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.billID = new System.Windows.Forms.Label();
+            this.cusID = new System.Windows.Forms.Label();
+            this.cusName = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
+            this.moneyReceive = new System.Windows.Forms.Label();
+            this.value = new System.Windows.Forms.Label();
+            this.moneyChange = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,7 +66,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
             this.panel4.Controls.Add(this.btnOut);
-            this.panel4.Controls.Add(this.listView1);
+            this.panel4.Controls.Add(this.listviewBooksBuy);
             this.panel4.Location = new System.Drawing.Point(571, 167);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
@@ -81,23 +88,23 @@
             this.btnOut.UseVisualStyleBackColor = false;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
-            // listView1
+            // listviewBooksBuy
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listviewBooksBuy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 4);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(674, 511);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listviewBooksBuy.HideSelection = false;
+            this.listviewBooksBuy.Location = new System.Drawing.Point(7, 4);
+            this.listviewBooksBuy.Margin = new System.Windows.Forms.Padding(4);
+            this.listviewBooksBuy.Name = "listviewBooksBuy";
+            this.listviewBooksBuy.Size = new System.Drawing.Size(674, 511);
+            this.listviewBooksBuy.TabIndex = 0;
+            this.listviewBooksBuy.UseCompatibleStateImageBehavior = false;
+            this.listviewBooksBuy.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -137,6 +144,13 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.Controls.Add(this.moneyChange);
+            this.panel3.Controls.Add(this.value);
+            this.panel3.Controls.Add(this.moneyReceive);
+            this.panel3.Controls.Add(this.date);
+            this.panel3.Controls.Add(this.cusName);
+            this.panel3.Controls.Add(this.cusID);
+            this.panel3.Controls.Add(this.billID);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -273,6 +287,69 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin hóa đơn";
             // 
+            // billID
+            // 
+            this.billID.AutoSize = true;
+            this.billID.Location = new System.Drawing.Point(199, 74);
+            this.billID.Name = "billID";
+            this.billID.Size = new System.Drawing.Size(54, 17);
+            this.billID.TabIndex = 10;
+            this.billID.Text = "label10";
+            // 
+            // cusID
+            // 
+            this.cusID.AutoSize = true;
+            this.cusID.Location = new System.Drawing.Point(199, 149);
+            this.cusID.Name = "cusID";
+            this.cusID.Size = new System.Drawing.Size(54, 17);
+            this.cusID.TabIndex = 11;
+            this.cusID.Text = "label11";
+            // 
+            // cusName
+            // 
+            this.cusName.AutoSize = true;
+            this.cusName.Location = new System.Drawing.Point(199, 220);
+            this.cusName.Name = "cusName";
+            this.cusName.Size = new System.Drawing.Size(54, 17);
+            this.cusName.TabIndex = 12;
+            this.cusName.Text = "label12";
+            // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.Location = new System.Drawing.Point(199, 305);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(54, 17);
+            this.date.TabIndex = 13;
+            this.date.Text = "label13";
+            // 
+            // moneyReceive
+            // 
+            this.moneyReceive.AutoSize = true;
+            this.moneyReceive.Location = new System.Drawing.Point(199, 448);
+            this.moneyReceive.Name = "moneyReceive";
+            this.moneyReceive.Size = new System.Drawing.Size(54, 17);
+            this.moneyReceive.TabIndex = 14;
+            this.moneyReceive.Text = "label14";
+            // 
+            // value
+            // 
+            this.value.AutoSize = true;
+            this.value.Location = new System.Drawing.Point(199, 379);
+            this.value.Name = "value";
+            this.value.Size = new System.Drawing.Size(54, 17);
+            this.value.TabIndex = 15;
+            this.value.Text = "label15";
+            // 
+            // moneyChange
+            // 
+            this.moneyChange.AutoSize = true;
+            this.moneyChange.Location = new System.Drawing.Point(199, 517);
+            this.moneyChange.Name = "moneyChange";
+            this.moneyChange.Size = new System.Drawing.Size(54, 17);
+            this.moneyChange.TabIndex = 16;
+            this.moneyChange.Text = "label16";
+            // 
             // CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,7 +377,7 @@
         #endregion
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnOut;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listviewBooksBuy;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -319,5 +396,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label moneyChange;
+        private System.Windows.Forms.Label value;
+        private System.Windows.Forms.Label moneyReceive;
+        private System.Windows.Forms.Label date;
+        private System.Windows.Forms.Label cusName;
+        private System.Windows.Forms.Label cusID;
+        private System.Windows.Forms.Label billID;
     }
 }

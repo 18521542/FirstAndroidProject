@@ -24,6 +24,8 @@ namespace GUI_Tier.FormsForSelling_Function
             ImportBookCardController = new ImportBookCardBLL();
 
             textboxDay.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+            LoadData();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -143,6 +145,8 @@ namespace GUI_Tier.FormsForSelling_Function
                 if (ImportBookCardController.AddImportBookCard(date, total, listviewBookChosen))
                 {
                     MessageBox.Show("Nhập sách thành công");
+                    Clear();
+                    LoadData();
                 }
 
             }
@@ -162,6 +166,16 @@ namespace GUI_Tier.FormsForSelling_Function
                 listviewBookChosen.Items.Remove(listviewBookChosen.SelectedItems[0]);
                 CountValueOfTotalBooks();
             }
+        }
+
+        private void Clear()
+        {
+            textboxTotal.Text = "";
+            listviewBookChosen.Items.Clear();
+            numericPrice.Value = 0;
+            numericCount.Value = 0;
+            textboxValue.Text = "";
+            textboxName.Text = "";
         }
     }
 }

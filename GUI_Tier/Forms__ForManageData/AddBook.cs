@@ -73,6 +73,7 @@ namespace GUI_Tier.Forms__ForManageData
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Clear();
             isShown = false;
         }
 
@@ -140,6 +141,7 @@ namespace GUI_Tier.Forms__ForManageData
                     if (BookController.AddBook(name, categoryID, authorsID, company, year))
                     {
                         MessageBox.Show("Them thanh cong");
+                        Clear();
                     }
                     else
                         MessageBox.Show("Them that bai");
@@ -150,6 +152,15 @@ namespace GUI_Tier.Forms__ForManageData
                 MessageBox.Show("Thong tin khong hop le");
             }
             
+        }
+
+        private void Clear()
+        {
+            textboxBookName.Text = "";
+            textboxCompany.Text = "";
+            textboxYear.Text = "";
+            cbbCategory.Items.Clear();
+            listTacGia.Controls.Clear();
         }
     }
 }

@@ -53,7 +53,7 @@ namespace GUI_Tier
 
         private void btnAddAuthor_Click(object sender, EventArgs e)
         {
-            string AuthorName = textboxAuthor.Text;
+            string AuthorName = textboxAddAuthor.Text;
             if (!string.IsNullOrEmpty(AuthorName))
             {
                 if (AuthorController.AddAuthor(AuthorName))
@@ -61,7 +61,7 @@ namespace GUI_Tier
                     MessageBox.Show("Thêm tác giả thành công");
                     listviewAuthors.Items.Clear();
                     ShowListAuthors();
-                    textboxAuthor.Text = "";
+                    textboxAddAuthor.Text = "";
                 }
                 else
                     MessageBox.Show("Thêm tác giả thất bại");

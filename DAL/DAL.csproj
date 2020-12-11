@@ -58,7 +58,10 @@
     <Compile Include="CustomerDAL.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="ImportBookCardDAL.cs" />
+    <Compile Include="PaymentDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportInventoryDAL.cs" />
+    <Compile Include="ReportRevenueDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
