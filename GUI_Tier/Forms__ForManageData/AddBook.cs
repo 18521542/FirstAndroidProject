@@ -26,11 +26,13 @@ namespace GUI_Tier.Forms__ForManageData
 
         public bool isShown = false;
 
+        public FormBookData parent = null;
+
         public AddBook()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(0, 0);
+            //this.StartPosition = FormStartPosition.Manual;
+            //this.Location = new Point(0, 0);
 
             //init properties
             AuthorController = new AuthorBLL();
@@ -39,7 +41,7 @@ namespace GUI_Tier.Forms__ForManageData
             RemovedButton = new Button();
             BookController = new BookBLL();
 
-            LoadData();
+            //LoadData();
             //LoadEventForListAuthors();
         }
         
@@ -55,7 +57,7 @@ namespace GUI_Tier.Forms__ForManageData
             }
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             LoadCombobox(AuthorController.GetAuthors(),
                 ref cbbAuthors,
@@ -63,6 +65,10 @@ namespace GUI_Tier.Forms__ForManageData
                 ref cbbCategory);
         }
 
+        public void SetParent(FormBookData parent)
+        {
+            this.parent = parent;
+        }
         public static AddBook getInstance()
         {
             if (instance == null)
@@ -84,7 +90,7 @@ namespace GUI_Tier.Forms__ForManageData
             {
                 if (author.Text.Contains(AuthorName))
                 {
-                    MessageBox.Show("Bi trung tac gia");
+                    MessageBox.Show("Bị trùng tác giả");
                     return;
                 }
             }
@@ -97,6 +103,7 @@ namespace GUI_Tier.Forms__ForManageData
             listTacGia.Controls.Add(Author);
         }
 
+        //Stackoverflow
         private void RemoveFromListButton(object sender, EventArgs e)
         {
             foreach (Control item in listTacGia.Controls.OfType<Control>())
@@ -106,7 +113,7 @@ namespace GUI_Tier.Forms__ForManageData
                     if (listTacGia.Controls.Count > 1)
                         listTacGia.Controls.Remove(item);
                     else
-                        MessageBox.Show("Sach phai co it nhat 1 tac gia");
+                        MessageBox.Show("Sách phải có ít nhất một tác giả");
                 }
             }
         }
@@ -142,24 +149,31 @@ namespace GUI_Tier.Forms__ForManageData
                     {
                         MessageBox.Show("Them thanh cong");
                         Clear();
+                        this.Hide();
+                        this.isShown = false;
+                        if (parent != null)
+                        {
+                            this.parent.ClearAndShow();
+                        }
                     }
                     else
-                        MessageBox.Show("Them that bai");
+                        MessageBox.Show("Thêm thất bại, vui lòng kiểm tra lại thông tin");
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Thong tin khong hop le");
+                MessageBox.Show("Thông tin không hợp lệ");
             }
             
         }
 
-        private void Clear()
+        public void Clear()
         {
             textboxBookName.Text = "";
             textboxCompany.Text = "";
             textboxYear.Text = "";
             cbbCategory.Items.Clear();
+            cbbAuthors.Items.Clear();
             listTacGia.Controls.Clear();
         }
     }

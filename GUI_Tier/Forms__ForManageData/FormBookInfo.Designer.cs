@@ -369,7 +369,7 @@ namespace GUI_Tier.Forms__ForManageData
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBookInfo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen; // init position to center screen
             this.Text = "BookInformation";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

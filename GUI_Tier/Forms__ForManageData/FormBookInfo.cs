@@ -27,7 +27,7 @@ namespace GUI_Tier.Forms__ForManageData
         //allow only 1 form to show
         public bool isShown = false;
 
-        private bool ComboboxIsLoaded = false;
+        //private bool ComboboxIsLoaded = false;
 
         private BookBLL BookController = null;
         private AuthorBLL AuthorController = null;
@@ -50,11 +50,12 @@ namespace GUI_Tier.Forms__ForManageData
         {
             Clear();
             book = BookController.GetBookByID(_id);
-            if (!ComboboxIsLoaded)
-            {
+            //if (!ComboboxIsLoaded)
+            //{
+            
                 LoadCombobox(AuthorController.GetAuthors(), ref cbbAuthors, CategoryController.GetCategories(), ref cbbCategory);
-                ComboboxIsLoaded = true;
-            }
+                //ComboboxIsLoaded = true;
+            //}
             LoadBookData();
         }
 
@@ -104,6 +105,7 @@ namespace GUI_Tier.Forms__ForManageData
             }
         }
 
+        //button Update
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -148,6 +150,7 @@ namespace GUI_Tier.Forms__ForManageData
             }
         }
 
+        //button Out
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -187,6 +190,8 @@ namespace GUI_Tier.Forms__ForManageData
             textboxName.Text = "";
             textboxYear.Text = "";
             listTacGia.Controls.Clear();
+            cbbAuthors.Items.Clear();
+            cbbCategory.Items.Clear();
             cbbCategory.SelectedItem = null;
             cbbAuthors.SelectedItem = null;
         }

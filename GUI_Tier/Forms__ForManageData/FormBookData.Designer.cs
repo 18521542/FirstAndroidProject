@@ -52,6 +52,7 @@
             this.btnSearch.Size = new System.Drawing.Size(50, 41);
             this.btnSearch.TabIndex = 20;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // listviewBooks
             // 

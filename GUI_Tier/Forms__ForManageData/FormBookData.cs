@@ -18,8 +18,10 @@ namespace GUI_Tier
         {
             InitializeComponent();
             bookController = new BookBLL();
+            ClearAndShow();
         }
 
+        //Show book info
         private void myListView_ItemClick(object sender, EventArgs e)
         {
             string id = this.listviewBooks.SelectedItems[0].SubItems[1].Text;
@@ -30,6 +32,7 @@ namespace GUI_Tier
             }
         }
 
+        //just a test
         private void button4_Click(object sender, EventArgs e)
         {
             Forms__ForManageData.FormBookInfo bookInfo = new Forms__ForManageData.FormBookInfo();
@@ -37,26 +40,31 @@ namespace GUI_Tier
             bookInfo.Show();
         }
 
+        //button New
         private void button3_Click(object sender, EventArgs e)
         {
             if (!Forms__ForManageData.AddBook.getInstance().isShown)
             {
                 Forms__ForManageData.AddBook.getInstance().isShown = true;
+                Forms__ForManageData.AddBook.getInstance().Clear();
+                Forms__ForManageData.AddBook.getInstance().LoadData();
                 Forms__ForManageData.AddBook.getInstance().Show();
+                Forms__ForManageData.AddBook.getInstance().SetParent(this);
             }
                 
         }
 
+        //Just a test
         private void button1_Click(object sender, EventArgs e)
         {
             Forms__ForManageData.FormBookInfo bookInfo = new Forms__ForManageData.FormBookInfo();
             bookInfo.Show();
         }
 
+        //button Show
         private void button2_Click_1(object sender, EventArgs e)
         {
-            listviewBooks.Items.Clear();
-            ShowListBooks();
+            ClearAndShow();
         }
 
         private void ShowListBooks()
@@ -72,5 +80,16 @@ namespace GUI_Tier
             }
         }
 
+        public void ClearAndShow()
+        {
+            this.listviewBooks.Items.Clear();
+            this.ShowListBooks();
+        }
+
+        //button search
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
