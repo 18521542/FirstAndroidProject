@@ -61,7 +61,7 @@ namespace GUI_Tier.FormsForSelling_Function
         {
             try
             {
-                if (paymentController.AddPayment(DateTime.Now, (float)moneyOwe.Value, cusChosen.Id()))
+                if (paymentController.AddPayment(DateTime.Now, (float)moneyReceive.Value, cusChosen.Id()))
                 {
                     MessageBox.Show("Thu tien thanh cong");
                     Clear();

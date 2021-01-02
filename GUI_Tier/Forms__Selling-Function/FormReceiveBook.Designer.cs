@@ -74,6 +74,7 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.DarkRed;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.GhostWhite;
             this.label1.Location = new System.Drawing.Point(4, 17);
@@ -112,7 +113,7 @@
             // 
             // listviewBookChosen
             // 
-            this.listviewBookChosen.BackColor = System.Drawing.Color.DarkOrchid;
+            this.listviewBookChosen.BackColor = System.Drawing.Color.LightSkyBlue;
             this.listviewBookChosen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listviewBookChosen.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -123,6 +124,7 @@
             this.columnHeader6,
             this.columnHeader15});
             this.listviewBookChosen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.listviewBookChosen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listviewBookChosen.ForeColor = System.Drawing.Color.White;
             this.listviewBookChosen.FullRowSelect = true;
             this.listviewBookChosen.HideSelection = false;
@@ -186,6 +188,7 @@
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.GhostWhite;
             this.label2.Location = new System.Drawing.Point(4, 113);
@@ -267,7 +270,7 @@
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.Purple;
+            this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,6 +351,7 @@
             // 
             // listviewBooks
             // 
+            this.listviewBooks.BackColor = System.Drawing.Color.LightSkyBlue;
             this.listviewBooks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listviewBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
@@ -358,6 +362,7 @@
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14});
+            this.listviewBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listviewBooks.FullRowSelect = true;
             this.listviewBooks.HideSelection = false;
             this.listviewBooks.Location = new System.Drawing.Point(37, 418);
@@ -438,7 +443,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panel2.BackColor = System.Drawing.Color.Wheat;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textboxDay);
             this.panel2.Controls.Add(this.textboxTotal);

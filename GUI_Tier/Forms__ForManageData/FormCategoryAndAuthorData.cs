@@ -23,12 +23,13 @@ namespace GUI_Tier
         public FormCategoryAndAuthorData()
         {
             InitializeComponent();
-
             AuthorController = new AuthorBLL();
             listAuthor = new List<Author>();
 
             categoryController = new CategoryBLL();
             listCategories = new List<Category>();
+
+            ClearAndLoad();
         }
 
 
@@ -115,6 +116,15 @@ namespace GUI_Tier
                 else
                     MessageBox.Show("Thêm thể loại thất bại");
             }
+        }
+
+        private void ClearAndLoad()
+        {
+            listviewCategories.Items.Clear();
+            ShowListCategories();
+
+            listviewAuthors.Items.Clear();
+            ShowListAuthors();
         }
     }
 }

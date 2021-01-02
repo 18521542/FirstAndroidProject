@@ -65,9 +65,12 @@ namespace GUI_Tier.FormsForSelling_Function
         private void myListView_ItemClick(object sender, EventArgs e)
         {
             string id = this.listviewBooks.SelectedItems[0].SubItems[1].Text;
-            textboxName.Text = BookController.GetBookByID(id).Name();
+            Book BookChosen = BookController.GetBookByID(id);
+
+            textboxName.Text = BookChosen.Name();
             numericCount.Value = 0;
-            numericPrice.Value = 0;
+            
+            numericPrice.Value = (decimal) BookChosen.Price();
             textboxTotal.Text = "";
         }
 
@@ -171,6 +174,7 @@ namespace GUI_Tier.FormsForSelling_Function
         private void Clear()
         {
             textboxTotal.Text = "";
+            listviewBooks.Items.Clear();
             listviewBookChosen.Items.Clear();
             numericPrice.Value = 0;
             numericCount.Value = 0;

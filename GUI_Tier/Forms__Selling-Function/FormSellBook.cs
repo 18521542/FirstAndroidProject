@@ -207,6 +207,7 @@ namespace GUI_Tier.FormsForSelling_Function
                 if(BillController.AddBill(date, BillValue, MoneyReceive, MoneyChange, customerID, listviewBooksBuy))
                 {
                     MessageBox.Show("Lập hóa đơn thành công");
+                    ClearAndReload();
                 }
             }
             catch(Exception ex)
@@ -222,12 +223,24 @@ namespace GUI_Tier.FormsForSelling_Function
 
         private void SetValueForMoneyChange()
         {
-            float rs = 0;
-            float MoneyReceive = float.Parse(textboxMoney.Value.ToString());
-            float Total = float.Parse(textboxTotal.Text);
+            try
+            {
+                float rs = 0;
+                float MoneyReceive = float.Parse(textboxMoney.Value.ToString());
+                float Total = float.Parse(textboxTotal.Text);
 
-            rs = Total - MoneyReceive;
-            textboxMoneychange.Text = rs.ToString();
+                rs = Total - MoneyReceive;
+                textboxMoneychange.Text = rs.ToString();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+                if(textboxMoney.Value != 0)
+                    textboxMoney.Value = 0;
+                MessageBox.Show("Vui lòng chọn sách mua hoặc khách hàng trước");
+                
+            }
+            
         }
     }
 }

@@ -42,7 +42,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textboxDay = new System.Windows.Forms.TextBox();
             this.textboxTotal = new System.Windows.Forms.TextBox();
             this.textboxMoneychange = new System.Windows.Forms.TextBox();
             this.textboxSearch = new System.Windows.Forms.TextBox();
@@ -56,12 +55,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.cbbCustomer = new System.Windows.Forms.ComboBox();
             this.numberOfBookBuy = new System.Windows.Forms.NumericUpDown();
             this.textboxName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textboxMoney = new System.Windows.Forms.NumericUpDown();
+            this.textboxDay = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numberOfBookBuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textboxMoney)).BeginInit();
             this.SuspendLayout();
@@ -209,26 +209,15 @@
             this.label7.Text = "Ngày HĐ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textboxDay
-            // 
-            this.textboxDay.Enabled = false;
-            this.textboxDay.Location = new System.Drawing.Point(190, 124);
-            this.textboxDay.Margin = new System.Windows.Forms.Padding(4);
-            this.textboxDay.Multiline = true;
-            this.textboxDay.Name = "textboxDay";
-            this.textboxDay.ReadOnly = true;
-            this.textboxDay.Size = new System.Drawing.Size(357, 22);
-            this.textboxDay.TabIndex = 30;
-            this.textboxDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // textboxTotal
             // 
             this.textboxTotal.Enabled = false;
+            this.textboxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxTotal.Location = new System.Drawing.Point(190, 177);
             this.textboxTotal.Margin = new System.Windows.Forms.Padding(4);
             this.textboxTotal.Name = "textboxTotal";
             this.textboxTotal.ReadOnly = true;
-            this.textboxTotal.Size = new System.Drawing.Size(357, 22);
+            this.textboxTotal.Size = new System.Drawing.Size(357, 30);
             this.textboxTotal.TabIndex = 31;
             this.textboxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -246,11 +235,12 @@
             // 
             // textboxSearch
             // 
-            this.textboxSearch.Location = new System.Drawing.Point(27, 434);
+            this.textboxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxSearch.Location = new System.Drawing.Point(215, 429);
             this.textboxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textboxSearch.Multiline = true;
             this.textboxSearch.Name = "textboxSearch";
-            this.textboxSearch.Size = new System.Drawing.Size(1053, 27);
+            this.textboxSearch.Size = new System.Drawing.Size(883, 33);
             this.textboxSearch.TabIndex = 34;
             // 
             // label2
@@ -357,26 +347,14 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Purple;
-            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1088, 434);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 32);
-            this.btnSearch.TabIndex = 45;
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
             // cbbCustomer
             // 
             this.cbbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCustomer.FormattingEnabled = true;
             this.cbbCustomer.Location = new System.Drawing.Point(191, 79);
             this.cbbCustomer.Name = "cbbCustomer";
-            this.cbbCustomer.Size = new System.Drawing.Size(357, 24);
+            this.cbbCustomer.Size = new System.Drawing.Size(357, 28);
             this.cbbCustomer.TabIndex = 49;
             // 
             // numberOfBookBuy
@@ -419,6 +397,7 @@
             // 
             // textboxMoney
             // 
+            this.textboxMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textboxMoney.Location = new System.Drawing.Point(190, 222);
             this.textboxMoney.Maximum = new decimal(new int[] {
             276447231,
@@ -426,10 +405,34 @@
             0,
             0});
             this.textboxMoney.Name = "textboxMoney";
-            this.textboxMoney.Size = new System.Drawing.Size(357, 22);
+            this.textboxMoney.Size = new System.Drawing.Size(357, 27);
             this.textboxMoney.TabIndex = 53;
             this.textboxMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textboxMoney.ValueChanged += new System.EventHandler(this.textboxMoney_ValueChanged);
+            // 
+            // textboxDay
+            // 
+            this.textboxDay.Enabled = false;
+            this.textboxDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxDay.Location = new System.Drawing.Point(191, 124);
+            this.textboxDay.Margin = new System.Windows.Forms.Padding(4);
+            this.textboxDay.Name = "textboxDay";
+            this.textboxDay.ReadOnly = true;
+            this.textboxDay.Size = new System.Drawing.Size(357, 30);
+            this.textboxDay.TabIndex = 54;
+            this.textboxDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Purple;
+            this.label10.Location = new System.Drawing.Point(60, 429);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 29);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "Tìm Kiếm:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormSellBook
             // 
@@ -437,12 +440,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1228, 857);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textboxDay);
             this.Controls.Add(this.textboxMoney);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textboxName);
             this.Controls.Add(this.numberOfBookBuy);
             this.Controls.Add(this.cbbCustomer);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
@@ -451,7 +455,6 @@
             this.Controls.Add(this.textboxSearch);
             this.Controls.Add(this.textboxMoneychange);
             this.Controls.Add(this.textboxTotal);
-            this.Controls.Add(this.textboxDay);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.listviewBooksBuy);
             this.Controls.Add(this.label6);
@@ -483,7 +486,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textboxDay;
         private System.Windows.Forms.TextBox textboxTotal;
         private System.Windows.Forms.TextBox textboxMoneychange;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -500,11 +502,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cbbCustomer;
         private System.Windows.Forms.NumericUpDown numberOfBookBuy;
         private System.Windows.Forms.TextBox textboxName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown textboxMoney;
+        private System.Windows.Forms.TextBox textboxDay;
+        private System.Windows.Forms.Label label10;
     }
 }
