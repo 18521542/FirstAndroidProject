@@ -108,7 +108,7 @@
             this.listviewCategories.Location = new System.Drawing.Point(4, 175);
             this.listviewCategories.Margin = new System.Windows.Forms.Padding(4);
             this.listviewCategories.Name = "listviewCategories";
-            this.listviewCategories.Size = new System.Drawing.Size(576, 600);
+            this.listviewCategories.Size = new System.Drawing.Size(576, 565);
             this.listviewCategories.TabIndex = 4;
             this.listviewCategories.UseCompatibleStateImageBehavior = false;
             this.listviewCategories.View = System.Windows.Forms.View.Details;
@@ -138,6 +138,7 @@
             this.textboxSearchCategory.Name = "textboxSearchCategory";
             this.textboxSearchCategory.Size = new System.Drawing.Size(470, 41);
             this.textboxSearchCategory.TabIndex = 2;
+            this.textboxSearchCategory.TextChanged += new System.EventHandler(this.textboxSearchCategory_TextChanged);
             // 
             // btnAddCategory
             // 
@@ -146,7 +147,7 @@
             this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCategory.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Location = new System.Drawing.Point(479, 783);
+            this.btnAddCategory.Location = new System.Drawing.Point(479, 748);
             this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(101, 41);
@@ -159,7 +160,7 @@
             // 
             this.textboxAddCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textboxAddCategory.Location = new System.Drawing.Point(4, 783);
+            this.textboxAddCategory.Location = new System.Drawing.Point(4, 748);
             this.textboxAddCategory.Margin = new System.Windows.Forms.Padding(4);
             this.textboxAddCategory.Name = "textboxAddCategory";
             this.textboxAddCategory.Size = new System.Drawing.Size(470, 41);
@@ -201,14 +202,15 @@
             this.richTextBox1.Size = new System.Drawing.Size(509, 41);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // textboxAddAuthor
             // 
             this.textboxAddAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textboxAddAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textboxAddAuthor.Location = new System.Drawing.Point(-1, 782);
+            this.textboxAddAuthor.Location = new System.Drawing.Point(8, 748);
             this.textboxAddAuthor.Name = "textboxAddAuthor";
-            this.textboxAddAuthor.Size = new System.Drawing.Size(509, 41);
+            this.textboxAddAuthor.Size = new System.Drawing.Size(503, 41);
             this.textboxAddAuthor.TabIndex = 12;
             this.textboxAddAuthor.Text = "";
             // 
@@ -237,10 +239,10 @@
             this.columnHeader6});
             this.listviewAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listviewAuthors.HideSelection = false;
-            this.listviewAuthors.Location = new System.Drawing.Point(0, 175);
+            this.listviewAuthors.Location = new System.Drawing.Point(8, 175);
             this.listviewAuthors.Margin = new System.Windows.Forms.Padding(4);
             this.listviewAuthors.Name = "listviewAuthors";
-            this.listviewAuthors.Size = new System.Drawing.Size(611, 600);
+            this.listviewAuthors.Size = new System.Drawing.Size(603, 564);
             this.listviewAuthors.TabIndex = 8;
             this.listviewAuthors.UseCompatibleStateImageBehavior = false;
             this.listviewAuthors.View = System.Windows.Forms.View.Details;
@@ -269,7 +271,7 @@
             this.btnAddAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAuthor.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddAuthor.ForeColor = System.Drawing.Color.White;
-            this.btnAddAuthor.Location = new System.Drawing.Point(518, 782);
+            this.btnAddAuthor.Location = new System.Drawing.Point(518, 744);
             this.btnAddAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAuthor.Name = "btnAddAuthor";
             this.btnAddAuthor.Size = new System.Drawing.Size(93, 44);

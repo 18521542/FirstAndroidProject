@@ -214,5 +214,43 @@ namespace GUI_Tier.FormsForSelling_Function
             textboxValue.Text = "";
             textboxName.Text = "";
         }
+
+        private void textboxSearch_TextChanged(object sender, EventArgs e)
+        {
+            List<Book> list = BookController.GetBooks();
+            string text = textboxSearch.Text;
+            for (int i = 0; i < list.Count(); i++)
+            {
+                if (!(list[i]).Name().Contains(text) && !(list[i]).Id().Equals(text))
+                {
+                    list.Remove(list[i]);
+                    i--;
+                }
+            }
+            this.listviewBooks.Items.Clear();
+            ShowListBooksbyName(list);
+        }
+        private void ShowListBooksbyName(List<Book> list)
+        {
+            int stt = 0;
+            foreach (Book book in list)
+            {
+                listviewBooks.Items.Add(stt.ToString());
+                listviewBooks.Items[stt].SubItems.Add(book.Id());
+                listviewBooks.Items[stt].SubItems.Add(book.Name());
+                listviewBooks.Items[stt].SubItems.Add(book.Category().Name());
+
+                string listAuthors = "";
+                foreach (Author author in book.Authors())
+                {
+                    listAuthors += author.Name() + "  ";
+                }
+                listviewBooks.Items[stt].SubItems.Add(listAuthors);
+                listviewBooks.Items[stt].SubItems.Add(book.PublishCompany());
+                listviewBooks.Items[stt].SubItems.Add(book.PublishYear().ToString());
+                listviewBooks.Items[stt].SubItems.Add(book.Count().ToString());
+                stt++;
+            }
+        }
     }
 }

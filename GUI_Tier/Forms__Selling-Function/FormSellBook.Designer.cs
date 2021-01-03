@@ -235,13 +235,14 @@
             // 
             // textboxSearch
             // 
-            this.textboxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxSearch.Location = new System.Drawing.Point(215, 429);
+            this.textboxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxSearch.Location = new System.Drawing.Point(240, 429);
             this.textboxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textboxSearch.Multiline = true;
             this.textboxSearch.Name = "textboxSearch";
             this.textboxSearch.Size = new System.Drawing.Size(883, 33);
             this.textboxSearch.TabIndex = 34;
+            this.textboxSearch.TextChanged += new System.EventHandler(this.textboxSearch_TextChanged);
             // 
             // label2
             // 
@@ -311,7 +312,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label3.Location = new System.Drawing.Point(21, 791);
+            this.label3.Location = new System.Drawing.Point(20, 801);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(233, 32);
@@ -359,6 +360,7 @@
             // 
             // numberOfBookBuy
             // 
+            this.numberOfBookBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberOfBookBuy.Location = new System.Drawing.Point(261, 801);
             this.numberOfBookBuy.Maximum = new decimal(new int[] {
             276447231,
@@ -366,7 +368,7 @@
             0,
             0});
             this.numberOfBookBuy.Name = "numberOfBookBuy";
-            this.numberOfBookBuy.Size = new System.Drawing.Size(120, 22);
+            this.numberOfBookBuy.Size = new System.Drawing.Size(120, 34);
             this.numberOfBookBuy.TabIndex = 50;
             // 
             // textboxName
@@ -426,10 +428,10 @@
             // 
             this.label10.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Purple;
-            this.label10.Location = new System.Drawing.Point(60, 429);
+            this.label10.Location = new System.Drawing.Point(45, 429);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 29);
+            this.label10.Size = new System.Drawing.Size(187, 33);
             this.label10.TabIndex = 55;
             this.label10.Text = "Tìm Kiếm:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

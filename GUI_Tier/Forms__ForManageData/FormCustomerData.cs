@@ -190,5 +190,32 @@ namespace GUI_Tier
             }
             return rs;
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            List<Customer> Customers = CustomerController.GetCustomers();
+            string text = richTextBox1.Text;
+            for (int i = 0; i < Customers.Count(); i++)
+            {
+                if (!(Customers[i]).Name().Contains(text) && !(Customers[i]).Id().Equals(text))
+                {
+                    Customers.Remove(Customers[i]);
+                    i--;
+                }
+            }
+            this.listviewCustomer.Items.Clear();
+            ShowListCustomerByName(Customers);
+        }
+        private void ShowListCustomerByName(List<Customer> list)
+        {
+            int stt = 0;
+            foreach (Customer cus in list)
+            {
+                listviewCustomer.Items.Add(stt.ToString());
+                listviewCustomer.Items[stt].SubItems.Add(cus.Id());
+                listviewCustomer.Items[stt].SubItems.Add(cus.Name());
+                stt++;
+            }
+        }
     }
 }

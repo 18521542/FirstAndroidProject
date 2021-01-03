@@ -126,5 +126,61 @@ namespace GUI_Tier
             listviewAuthors.Items.Clear();
             ShowListAuthors();
         }
+
+        //Author
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            List<Author> Authors = AuthorController.GetAuthors();
+            string text = richTextBox1.Text;
+            for (int i = 0; i < Authors.Count(); i++)
+            {
+                if (!(Authors[i]).Name().Contains(text) && !(Authors[i]).Id().Equals(text))
+                {
+                    Authors.Remove(Authors[i]);
+                    i--;
+                }
+            }
+            this.listviewAuthors.Items.Clear();
+            ShowListAuthorByName(Authors);
+        }
+
+        private void ShowListAuthorByName(List<Author> list)
+        {
+            int stt = 0;
+            foreach (Author author in list)
+            {
+                listviewAuthors.Items.Add(stt.ToString());
+                listviewAuthors.Items[stt].SubItems.Add(author.Id());
+                listviewAuthors.Items[stt].SubItems.Add(author.Name());
+                stt++;
+            }
+        }
+
+        private void textboxSearchCategory_TextChanged(object sender, EventArgs e)
+        {
+            List<Category> Categories = categoryController.GetCategories();
+            string text = textboxSearchCategory.Text;
+            for (int i = 0; i < Categories.Count(); i++)
+            {
+                if (!(Categories[i]).Name().Contains(text) && !(Categories[i]).Id().Equals(text))
+                {
+                    Categories.Remove(Categories[i]);
+                    i--;
+                }
+            }
+            this.listviewCategories.Items.Clear();
+            ShowListCateByName(Categories);
+        }
+        private void ShowListCateByName(List<Category> list)
+        {
+            int stt = 0;
+            foreach (Category cate in list)
+            {
+                listviewCategories.Items.Add(stt.ToString());
+                listviewCategories.Items[stt].SubItems.Add(cate.Id());
+                listviewCategories.Items[stt].SubItems.Add(cate.Name());
+                stt++;
+            }
+        }
     }
 }

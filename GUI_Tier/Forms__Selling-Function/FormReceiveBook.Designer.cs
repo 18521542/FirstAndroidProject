@@ -49,7 +49,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.textboxName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -201,18 +200,20 @@
             // 
             // textboxSearch
             // 
-            this.textboxSearch.Location = new System.Drawing.Point(207, 374);
+            this.textboxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxSearch.Location = new System.Drawing.Point(257, 366);
             this.textboxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textboxSearch.Multiline = true;
             this.textboxSearch.Name = "textboxSearch";
-            this.textboxSearch.Size = new System.Drawing.Size(800, 29);
+            this.textboxSearch.Size = new System.Drawing.Size(800, 36);
             this.textboxSearch.TabIndex = 7;
+            this.textboxSearch.TextChanged += new System.EventHandler(this.textboxSearch_TextChanged);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Purple;
-            this.label3.Location = new System.Drawing.Point(45, 374);
+            this.label3.Location = new System.Drawing.Point(94, 366);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 29);
@@ -296,19 +297,6 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Purple;
-            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1016, 370);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(167, 39);
-            this.btnSearch.TabIndex = 17;
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
@@ -478,7 +466,6 @@
             this.Controls.Add(this.textboxName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textboxValue);
             this.Controls.Add(this.label6);
@@ -521,7 +508,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox textboxName;
         private System.Windows.Forms.Label label8;

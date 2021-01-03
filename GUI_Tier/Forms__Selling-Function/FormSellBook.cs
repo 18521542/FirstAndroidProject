@@ -266,5 +266,37 @@ namespace GUI_Tier.FormsForSelling_Function
             }
             
         }
+
+        private void textboxSearch_TextChanged(object sender, EventArgs e)
+        {
+            List<Book> list = BookController.GetBooks();
+            string text = textboxSearch.Text;
+            for (int i = 0; i < list.Count(); i++)
+            {
+                if (!(list[i]).Name().Contains(text) && !(list[i]).Id().Equals(text))
+                {
+                    list.Remove(list[i]);
+                    i--;
+                }
+            }
+            this.listviewBooks.Items.Clear();
+            ShowListBooksbyName(list);
+        }
+        private void ShowListBooksbyName(List<Book> list)
+        {
+            int stt = 0;
+            foreach (Book book in list)
+            {
+                listviewBooks.Items.Add(stt.ToString());
+                listviewBooks.Items[stt].SubItems.Add(book.Id());
+                listviewBooks.Items[stt].SubItems.Add(book.Name());
+                listviewBooks.Items[stt].SubItems.Add(book.Count().ToString());
+                float Percent = (float)110 / 100;
+                float BuyPrice = book.Price() * Percent;
+                listviewBooks.Items[stt].SubItems.Add(BuyPrice.ToString());
+                stt++;
+            }
+        }
+
     }
 }
