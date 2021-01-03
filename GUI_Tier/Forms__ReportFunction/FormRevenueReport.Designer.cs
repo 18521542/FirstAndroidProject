@@ -42,6 +42,7 @@
             this.year = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.month = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panelBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.year)).BeginInit();
@@ -65,6 +66,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.listviewBook);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.panelBtn);
@@ -129,7 +131,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Red;
             this.btnSearch.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSearch.Location = new System.Drawing.Point(505, 5);
+            this.btnSearch.Location = new System.Drawing.Point(470, 6);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(179, 64);
@@ -148,7 +150,7 @@
             this.panelBtn.Location = new System.Drawing.Point(3, 6);
             this.panelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.panelBtn.Name = "panelBtn";
-            this.panelBtn.Size = new System.Drawing.Size(494, 62);
+            this.panelBtn.Size = new System.Drawing.Size(459, 64);
             this.panelBtn.TabIndex = 2;
             // 
             // label4
@@ -203,6 +205,18 @@
             this.month.Size = new System.Drawing.Size(66, 22);
             this.month.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(1079, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 63);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "EXPORT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormRevenueReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,5 +252,6 @@
         private System.Windows.Forms.NumericUpDown year;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
