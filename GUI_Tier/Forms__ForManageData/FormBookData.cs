@@ -14,10 +14,14 @@ namespace GUI_Tier
     public partial class FormBookData : Form
     {
         private BookBLL bookController = null;
+        private List<Book> list = null;
+        private List<Book> ListShow = null;
         public FormBookData()
         {
             InitializeComponent();
             bookController = new BookBLL();
+            list = bookController.GetBooks();
+            ListShow = bookController.GetBooks();
             ClearAndShow();
         }
 
@@ -80,6 +84,19 @@ namespace GUI_Tier
             }
         }
 
+        private void ShowListBooksByName(List<Book> list)
+        {
+            int stt = 0;
+            foreach (Book book in list)
+            {
+                listviewBooks.Items.Add(stt.ToString());
+                listviewBooks.Items[stt].SubItems.Add(book.Id());
+                listviewBooks.Items[stt].SubItems.Add(book.Name());
+                listviewBooks.Items[stt].SubItems.Add(book.Count().ToString());
+                stt++;
+            }
+        }
+
         public void ClearAndShow()
         {
             this.listviewBooks.Items.Clear();
@@ -90,6 +107,22 @@ namespace GUI_Tier
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            List<Book> list = bookController.GetBooks();
+            string text = richTextBox1.Text;
+            for (int i = 0; i < list.Count(); i++)
+            {
+                if (!(list[i]).Name().Contains(text) && !(list[i]).Id().Equals(text))
+                {
+                    list.Remove(list[i]);
+                    i--;
+                }
+            }
+            this.listviewBooks.Items.Clear();
+            ShowListBooksByName(list);
         }
     }
 }
