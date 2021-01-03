@@ -82,9 +82,16 @@ namespace GUI_Tier.FormsForSelling_Function
         }
         private void ShowInfoCus()
         {
-            name.Text = cusChosen.Name();
-            moneyOwe.Value = (decimal) cusChosen.Owe();
-            moneyRest.Text = RestMoney().ToString();
+            try
+            {
+                name.Text = cusChosen.Name();
+                moneyOwe.Value = (decimal)cusChosen.Owe();
+                moneyRest.Text = RestMoney().ToString();
+            }
+            catch(Exception e)
+            {
+
+            }
         }
         private int RestMoney()
         {

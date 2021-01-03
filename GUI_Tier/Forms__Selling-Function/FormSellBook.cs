@@ -17,10 +17,12 @@ namespace GUI_Tier.FormsForSelling_Function
         private CustomerBLL CustomerController = null;
         private BookBLL BookController = null;
         private BillBLL BillController = null;
+        private MyRuleBLL RuleController = null;
 
         private List<Book> books = null;
         private List<Customer> customers = null;
         private Book bookSelected = null;
+        private MyRule rules = null;
 
         public FormSellBook()
         {
@@ -29,7 +31,10 @@ namespace GUI_Tier.FormsForSelling_Function
             BookController = new BookBLL();
             //bookSelected = new Book();
             BillController = new BillBLL();
+            RuleController = new MyRuleBLL();
+
             ClearAndReload();
+            rules = RuleController.GetRules();
         }
 
         private void ClearAndReload()
@@ -115,6 +120,14 @@ namespace GUI_Tier.FormsForSelling_Function
                     //Số lượng
                     int count = Int32.Parse(numberOfBookBuy.Value.ToString());
 
+                    int BookCountAfterBuying = bookSelected.Count() - count;
+                    if(BookCountAfterBuying < rules.MaximumBookLeft)
+                    {
+                        string message = "Số lượng tồn tối thiểu sau khi bán phải là ";
+                        message += rules.MaximumBookLeft.ToString();
+                        MessageBox.Show(message);
+                        return;
+                    }
                     if(count <= bookSelected.Count())
                     {
                         if (!BookIsSelectedToBill(id, ref indexOfBookExistInBill))
@@ -204,6 +217,14 @@ namespace GUI_Tier.FormsForSelling_Function
                 float MoneyReceive = float.Parse(textboxMoney.Value.ToString());
                 float MoneyChange = float.Parse(textboxMoneychange.Text);
 
+                if (rules.MaximumOwe < (int) MoneyChange)
+                {
+                    string message = "Lượng nợ tối thiểu cho khách hàng là ";
+                    message += rules.MaximumOwe.ToString();
+                    MessageBox.Show(message);
+                    return;
+                }
+
                 if(BillController.AddBill(date, BillValue, MoneyReceive, MoneyChange, customerID, listviewBooksBuy))
                 {
                     MessageBox.Show("Lập hóa đơn thành công");
@@ -230,7 +251,10 @@ namespace GUI_Tier.FormsForSelling_Function
                 float Total = float.Parse(textboxTotal.Text);
 
                 rs = Total - MoneyReceive;
-                textboxMoneychange.Text = rs.ToString();
+                if (rs >= 0)
+                    textboxMoneychange.Text = rs.ToString();
+                else
+                    textboxMoneychange.Text = 0.ToString();
             }
             catch(Exception ex)
             {

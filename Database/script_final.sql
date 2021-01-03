@@ -1,5 +1,5 @@
-create schema BookStoreManagement;
-use BookStoreManagement;
+create schema BookStoreManagement1111;
+use BookStoreManagement1111;
 
 CREATE TABLE THELOAISACH
 (
@@ -153,21 +153,21 @@ insert into Account values ("admin","admin",0,"Default","Default","Default","Def
 DELIMITER $$
 create procedure USP_Login(p_userName VARCHAR(255),p_passWord VARCHAR(255))
 BEGIN
-select * from BookStoreManagement.Account where username=p_userName and password=p_passWord;
+select * from BookStoreManagement1111.Account where username=p_userName and password=p_passWord;
 END; $$
 DELIMITER ;
 
 DELIMITER $$
 create procedure USP_GetAccountByUsername(p_userName VARCHAR(255))
 BEGIN
-select * from BookStoreManagement.Account where username=p_userName;
+select * from BookStoreManagement1111.Account where username=p_userName;
 END; $$
 DELIMITER ;
 
 DELIMITER $$
 create procedure USP_AddAccount(p_userName VARCHAR(255), p_password VARCHAR(255), p_type int, p_RealName VARCHAR(255), p_PhoneNumber VARCHAR(255), p_Email VARCHAR(255), p_Address VARCHAR(255))
 BEGIN
-INSERT INTO BookStoreManagement.Account (username, password, type, realname, PhoneNumber, Email, Address)
+INSERT INTO BookStoreManagement1111.Account (username, password, type, realname, PhoneNumber, Email, Address)
 VALUES (p_username,p_password, p_type, p_RealName, p_PhoneNumber, p_Email,p_Address);
 END; $$
 DELIMITER ;
@@ -175,7 +175,7 @@ DELIMITER ;
 DELIMITER $$
 create procedure USP_GetAccount()
 BEGIN
-select * from BookStoreManagement.Account;
+select * from BookStoreManagement1111.Account;
 END; $$
 DELIMITER ;
 
@@ -525,4 +525,29 @@ DELIMITER ;
 DELIMITER $$
 
 END;
+DELIMITER ;
+
+CREATE TABLE QUYDINH
+(
+	LuongNhapToiThieu INT NOT NULL ,
+	LuongTonTruocKhiNhap INT NOT NULL  ,
+	LuongTonSauKhiBan INT NOT NULL ,
+	TienNoToiDa INT NOT NULL
+);
+
+insert into QUYDINH values (0,0,0,0);
+
+DELIMITER $$
+create procedure USP_GetRules()
+BEGIN
+select * from QUYDINH;
+END; $$
+DELIMITER ;
+
+DELIMITER $$
+create procedure USP_UpdateRules(NhapToiThieu int, TonTruocKhiNhap int, TonSauKhiBan int, NoToiDa int)
+BEGIN
+	UPDATE QUYDINH
+ 	SET QUYDINH.LuongNhapToiThieu =NhapToiThieu, QUYDINH.LuongTonTruocKhiNhap =TonTruocKhiNhap,QUYDINH.LuongTonSauKhiBan =TonSauKhiBan,QUYDINH.TienNoToiDa =NoToiDa;
+END; $$
 DELIMITER ;

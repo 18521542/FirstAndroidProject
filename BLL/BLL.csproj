@@ -54,6 +54,7 @@
     <Compile Include="CategoryBLL.cs" />
     <Compile Include="CustomerBLL.cs" />
     <Compile Include="ImportBookCardBLL.cs" />
+    <Compile Include="MyRuleBLL.cs" />
     <Compile Include="PaymentBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportInventoryBLL.cs" />

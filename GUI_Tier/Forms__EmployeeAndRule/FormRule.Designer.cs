@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbNhapToiThieu = new System.Windows.Forms.TextBox();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.tbTonTruocNhap = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTonSauKhiBan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbNoToiDa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -66,41 +66,42 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Lượng Nhập Tối Thiểu";
             // 
-            // textBox1
+            // tbNhapToiThieu
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(315, 130);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(732, 46);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "123\r\n";
+            this.tbNhapToiThieu.BackColor = System.Drawing.SystemColors.Info;
+            this.tbNhapToiThieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNhapToiThieu.Location = new System.Drawing.Point(315, 130);
+            this.tbNhapToiThieu.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNhapToiThieu.Multiline = true;
+            this.tbNhapToiThieu.Name = "tbNhapToiThieu";
+            this.tbNhapToiThieu.Size = new System.Drawing.Size(732, 46);
+            this.tbNhapToiThieu.TabIndex = 2;
+            this.tbNhapToiThieu.Text = "123\r\n";
             // 
-            // button1
+            // btnsave
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(315, 658);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(374, 58);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnsave.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnsave.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.ForeColor = System.Drawing.Color.White;
+            this.btnsave.Location = new System.Drawing.Point(315, 658);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(374, 58);
+            this.btnsave.TabIndex = 3;
+            this.btnsave.Text = "Lưu";
+            this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btbSave_Click);
             // 
-            // textBox2
+            // tbTonTruocNhap
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox2.Location = new System.Drawing.Point(315, 262);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(732, 46);
-            this.textBox2.TabIndex = 5;
+            this.tbTonTruocNhap.BackColor = System.Drawing.SystemColors.Info;
+            this.tbTonTruocNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.tbTonTruocNhap.Location = new System.Drawing.Point(315, 262);
+            this.tbTonTruocNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTonTruocNhap.Multiline = true;
+            this.tbTonTruocNhap.Name = "tbTonTruocNhap";
+            this.tbTonTruocNhap.Size = new System.Drawing.Size(732, 46);
+            this.tbTonTruocNhap.TabIndex = 5;
             // 
             // label3
             // 
@@ -113,16 +114,16 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Lượng Tồn Trước Nhập";
             // 
-            // textBox3
+            // tbTonSauKhiBan
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox3.Location = new System.Drawing.Point(315, 387);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(732, 46);
-            this.textBox3.TabIndex = 7;
+            this.tbTonSauKhiBan.BackColor = System.Drawing.SystemColors.Info;
+            this.tbTonSauKhiBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.tbTonSauKhiBan.Location = new System.Drawing.Point(315, 387);
+            this.tbTonSauKhiBan.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTonSauKhiBan.Multiline = true;
+            this.tbTonSauKhiBan.Name = "tbTonSauKhiBan";
+            this.tbTonSauKhiBan.Size = new System.Drawing.Size(732, 46);
+            this.tbTonSauKhiBan.TabIndex = 7;
             // 
             // label4
             // 
@@ -135,16 +136,16 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Lượng Tồn Sau Khi Bán";
             // 
-            // textBox4
+            // tbNoToiDa
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox4.Location = new System.Drawing.Point(315, 517);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(732, 46);
-            this.textBox4.TabIndex = 9;
+            this.tbNoToiDa.BackColor = System.Drawing.SystemColors.Info;
+            this.tbNoToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.tbNoToiDa.Location = new System.Drawing.Point(315, 517);
+            this.tbNoToiDa.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNoToiDa.Multiline = true;
+            this.tbNoToiDa.Name = "tbNoToiDa";
+            this.tbNoToiDa.Size = new System.Drawing.Size(732, 46);
+            this.tbNoToiDa.TabIndex = 9;
             // 
             // label5
             // 
@@ -173,14 +174,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 843);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbNoToiDa);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbTonSauKhiBan);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbTonTruocNhap);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnsave);
+            this.Controls.Add(this.tbNhapToiThieu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -196,13 +197,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbNhapToiThieu;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.TextBox tbTonTruocNhap;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbTonSauKhiBan;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbNoToiDa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
     }

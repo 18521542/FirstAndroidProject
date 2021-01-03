@@ -14,18 +14,28 @@ namespace GUI_Tier.FormsForSelling_Function
 {
     public partial class FormReceiveBook : Form
     {
+        private MyRuleBLL RulesController = null;
         private BookBLL BookController = null;
         private ImportBookCardBLL ImportBookCardController = null;
+        private MyRule rules = null;
         public FormReceiveBook()
         {
             InitializeComponent();
 
             BookController = new BookBLL();
             ImportBookCardController = new ImportBookCardBLL();
+            RulesController = new MyRuleBLL();
 
             textboxDay.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             LoadData();
+
+            LoadRules();
+        }
+
+        private void LoadRules()
+        {
+            rules = RulesController.GetRules();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -81,12 +91,35 @@ namespace GUI_Tier.FormsForSelling_Function
                 MessageBox.Show("Vui lòng nhập đúng định dạng");
                 return;
             }
+
+            //get the book which is selecting 
             Book bookSelected = BookController.GetBookByID(listviewBooks.SelectedItems[0].SubItems[1].Text);
             string id = bookSelected.Id();
             int indexOfBookExistInBill = -1;
+
+            //check rule
+            if (bookSelected.Count() > rules.MinimumBookLeft)
+            {
+                string message = "Số lượng sách còn quá nhiều, vui lòng nhập sách khi số lượng ít hơn";
+                message += rules.MinimumBookLeft.ToString();
+                MessageBox.Show(message);
+                return;
+            }
+            if (numericCount.Value < rules.MininumImport)
+            {
+                string message = "Số lượng nhập tối thiểu phải là ";
+                message += rules.MininumImport.ToString();
+                MessageBox.Show(message);
+                return;
+            }
+
+            //if the book haven't exist in bill
             if (!BookIsSelectedToBill(id, ref indexOfBookExistInBill))
             {
+                //get number of books which are chosen then create new index
                 int index = listviewBookChosen.Items.Count;
+
+                //Add book to the bill
                 listviewBookChosen.Items.Add(index.ToString());
                 listviewBookChosen.Items[index].SubItems.Add(bookSelected.Id());
                 listviewBookChosen.Items[index].SubItems.Add(bookSelected.Name());
