@@ -38,6 +38,13 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.moneyChange = new System.Windows.Forms.Label();
+            this.value = new System.Windows.Forms.Label();
+            this.moneyReceive = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
+            this.cusName = new System.Windows.Forms.Label();
+            this.cusID = new System.Windows.Forms.Label();
+            this.billID = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,13 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.billID = new System.Windows.Forms.Label();
-            this.cusID = new System.Windows.Forms.Label();
-            this.cusName = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
-            this.moneyReceive = new System.Windows.Forms.Label();
-            this.value = new System.Windows.Forms.Label();
-            this.moneyChange = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -164,6 +164,69 @@
             this.panel3.Size = new System.Drawing.Size(532, 609);
             this.panel3.TabIndex = 16;
             // 
+            // moneyChange
+            // 
+            this.moneyChange.AutoSize = true;
+            this.moneyChange.Location = new System.Drawing.Point(199, 517);
+            this.moneyChange.Name = "moneyChange";
+            this.moneyChange.Size = new System.Drawing.Size(54, 17);
+            this.moneyChange.TabIndex = 16;
+            this.moneyChange.Text = "label16";
+            // 
+            // value
+            // 
+            this.value.AutoSize = true;
+            this.value.Location = new System.Drawing.Point(199, 379);
+            this.value.Name = "value";
+            this.value.Size = new System.Drawing.Size(54, 17);
+            this.value.TabIndex = 15;
+            this.value.Text = "label15";
+            // 
+            // moneyReceive
+            // 
+            this.moneyReceive.AutoSize = true;
+            this.moneyReceive.Location = new System.Drawing.Point(199, 448);
+            this.moneyReceive.Name = "moneyReceive";
+            this.moneyReceive.Size = new System.Drawing.Size(54, 17);
+            this.moneyReceive.TabIndex = 14;
+            this.moneyReceive.Text = "label14";
+            // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.Location = new System.Drawing.Point(199, 305);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(54, 17);
+            this.date.TabIndex = 13;
+            this.date.Text = "label13";
+            // 
+            // cusName
+            // 
+            this.cusName.AutoSize = true;
+            this.cusName.Location = new System.Drawing.Point(199, 220);
+            this.cusName.Name = "cusName";
+            this.cusName.Size = new System.Drawing.Size(54, 17);
+            this.cusName.TabIndex = 12;
+            this.cusName.Text = "label12";
+            // 
+            // cusID
+            // 
+            this.cusID.AutoSize = true;
+            this.cusID.Location = new System.Drawing.Point(199, 149);
+            this.cusID.Name = "cusID";
+            this.cusID.Size = new System.Drawing.Size(54, 17);
+            this.cusID.TabIndex = 11;
+            this.cusID.Text = "label11";
+            // 
+            // billID
+            // 
+            this.billID.AutoSize = true;
+            this.billID.Location = new System.Drawing.Point(199, 74);
+            this.billID.Name = "billID";
+            this.billID.Size = new System.Drawing.Size(54, 17);
+            this.billID.TabIndex = 10;
+            this.billID.Text = "label10";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -182,9 +245,9 @@
             this.label8.Location = new System.Drawing.Point(64, 517);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 24);
+            this.label8.Size = new System.Drawing.Size(90, 24);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Tiền thừa:";
+            this.label8.Text = "Tiền nợ:";
             // 
             // label7
             // 
@@ -287,69 +350,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin hóa đơn";
             // 
-            // billID
-            // 
-            this.billID.AutoSize = true;
-            this.billID.Location = new System.Drawing.Point(199, 74);
-            this.billID.Name = "billID";
-            this.billID.Size = new System.Drawing.Size(54, 17);
-            this.billID.TabIndex = 10;
-            this.billID.Text = "label10";
-            // 
-            // cusID
-            // 
-            this.cusID.AutoSize = true;
-            this.cusID.Location = new System.Drawing.Point(199, 149);
-            this.cusID.Name = "cusID";
-            this.cusID.Size = new System.Drawing.Size(54, 17);
-            this.cusID.TabIndex = 11;
-            this.cusID.Text = "label11";
-            // 
-            // cusName
-            // 
-            this.cusName.AutoSize = true;
-            this.cusName.Location = new System.Drawing.Point(199, 220);
-            this.cusName.Name = "cusName";
-            this.cusName.Size = new System.Drawing.Size(54, 17);
-            this.cusName.TabIndex = 12;
-            this.cusName.Text = "label12";
-            // 
-            // date
-            // 
-            this.date.AutoSize = true;
-            this.date.Location = new System.Drawing.Point(199, 305);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(54, 17);
-            this.date.TabIndex = 13;
-            this.date.Text = "label13";
-            // 
-            // moneyReceive
-            // 
-            this.moneyReceive.AutoSize = true;
-            this.moneyReceive.Location = new System.Drawing.Point(199, 448);
-            this.moneyReceive.Name = "moneyReceive";
-            this.moneyReceive.Size = new System.Drawing.Size(54, 17);
-            this.moneyReceive.TabIndex = 14;
-            this.moneyReceive.Text = "label14";
-            // 
-            // value
-            // 
-            this.value.AutoSize = true;
-            this.value.Location = new System.Drawing.Point(199, 379);
-            this.value.Name = "value";
-            this.value.Size = new System.Drawing.Size(54, 17);
-            this.value.TabIndex = 15;
-            this.value.Text = "label15";
-            // 
-            // moneyChange
-            // 
-            this.moneyChange.AutoSize = true;
-            this.moneyChange.Location = new System.Drawing.Point(199, 517);
-            this.moneyChange.Name = "moneyChange";
-            this.moneyChange.Size = new System.Drawing.Size(54, 17);
-            this.moneyChange.TabIndex = 16;
-            this.moneyChange.Text = "label16";
-            // 
             // CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -362,6 +362,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CTHD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CTHD";
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

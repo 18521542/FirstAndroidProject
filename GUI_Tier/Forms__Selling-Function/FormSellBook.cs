@@ -111,8 +111,8 @@ namespace GUI_Tier.FormsForSelling_Function
                     int indexOfBookExistInBill = -1;
 
                     //Giá bán
-                    float Percent = 110 / 100;
-                    float BuyPrice = Percent * bookSelected.Price();
+                    float Percent = (float) 110 / 100;
+                    float BuyPrice =  Percent * bookSelected.Price();
 
                     //Tổng tiền
                     float TotalPriceOfBook = BuyPrice * (float.Parse(numberOfBookBuy.Value.ToString()));
@@ -128,6 +128,8 @@ namespace GUI_Tier.FormsForSelling_Function
                         MessageBox.Show(message);
                         return;
                     }
+
+                    //if number of book in inventory is enought
                     if(count <= bookSelected.Count())
                     {
                         if (!BookIsSelectedToBill(id, ref indexOfBookExistInBill))
