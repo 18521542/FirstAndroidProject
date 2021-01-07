@@ -1,0 +1,10 @@
+B1: Vào Setup->Debug->setup.exe (hoặc Setup.msi)
+B2: Truy cập vào đường link : https://www.apachefriends.org/download.html và tiến hành cài đặt xampp.
+B3: Đăng nhập với username: admin, password: admin.
+
+Lưu ý: Nếu đăng nhập không thành công, hãy kiểm tra lại bằng các bước sau: 
+B1: Vào phần mềm xampp (Đã cài đặt ở bước 2). Start Apache và MySQL. Nếu start thành công thì tiếp tục sử dụng hệ thống. Nếu không, tiếp tục bước 2
+B2: Vào phần config của Apache -> vào Apache (httpd.config) -> tìm dòng Listen 80 và sửa lại thành Listen 8080.
+B3: Vào config bên trên Netstat-> vào Service and Port Settings-> ở phần main port sửa lại thành 8080.
+
+Nếu vẫn không được xin hãy liên hệ fb.com/DuyTrong2000
