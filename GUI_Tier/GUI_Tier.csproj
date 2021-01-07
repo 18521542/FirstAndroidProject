@@ -231,7 +231,13 @@
     <Content Include="Resources\books_100px.png" />
     <None Include="Resources\Collapse Arrow_20px.png" />
     <None Include="Resources\Expand Arrow_20px.png" />
+    <Content Include="Resources\icons8-card-payment-64.png" />
+    <Content Include="Resources\icons8-name-tag-64.png" />
+    <Content Include="Resources\icons8-paid-bill-48.png" />
+    <Content Include="Resources\icons8-paid-bill-64.png" />
     <Content Include="Resources\icons8-repeat-32.png" />
+    <Content Include="Resources\icons8-report-card-64.png" />
+    <Content Include="Resources\icons8-rules-64.png" />
     <Content Include="Resources\icons8-search-32.png" />
     <Content Include="Resources\Main_Background.jpg" />
     <Content Include="Resources\password_24px.png" />

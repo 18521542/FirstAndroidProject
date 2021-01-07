@@ -94,13 +94,13 @@ namespace GUI_Tier
         //Show info of active user when login-in
         private void ShowInfo()
         {
-            lbUsername.Text = user.getUsername();
-            lbPassword.Text = user.getPassword();
-            lbType.Text = user.getType().ToString();
-            lbRealname.Text = user.getRealName();
-            lbEmail.Text = user.getEmail();
-            lblPhone.Text = user.getPhoneNumber();
-            lbAddress.Text = user.getAddress();
+            //lbUsername.Text = user.getUsername();
+            //lbPassword.Text = user.getPassword();
+            //lbType.Text = user.getType().ToString();
+            //lbRealname.Text = user.getRealName();
+            //lbEmail.Text = user.getEmail();
+            //lblPhone.Text = user.getPhoneNumber();
+            //lbAddress.Text = user.getAddress();
         }
 
         //show submenu from DataManageMenu                          
